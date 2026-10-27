@@ -1,0 +1,598 @@
+/*
+ * Additions for the data-driven case-study template. Layout, spacing,
+ * typography and reveal animations come from the original stylesheet
+ * (`site.css`, `.cs-*` rules); this file only styles the code-built media
+ * (brand board, browser / phone / poster mockups) and review markers.
+ */
+
+.cs-case-image,
+.cs-media {
+  position: relative;
+}
+
+/* ---------- shared mockup surface ---------- */
+
+.cs-media figure {
+  margin: 0;
+}
+
+.cs-media--browser,
+.cs-media--phone,
+.cs-media--poster {
+  container-type: inline-size;
+}
+
+.cs-digital-gateway-image.cs-media--browser,
+.cs-digital-gateway-image.cs-media--poster {
+  aspect-ratio: 2048 / 1299;
+}
+
+.cs-digital-image.cs-media--browser,
+.cs-digital-image.cs-media--phone,
+.cs-digital-image.cs-media--poster {
+  aspect-ratio: 1292 / 1112;
+}
+
+.cs-conversations-image.cs-media--phone figure,
+.cs-conversations-image.cs-media--poster figure,
+.cs-conversations-image.cs-media--browser figure {
+  height: 100%;
+}
+
+/* ---------- browser mockup ---------- */
+
+.cs-browser {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 6cqw 7cqw 0;
+  overflow: hidden;
+}
+
+.cs-browser-window {
+  align-self: end;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.1cqw 1.1cqw 0 0;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 2cqw 6cqw #0000002e;
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.6cqw;
+  height: 3.4cqw;
+  padding: 0 1.4cqw;
+  background: #f1f1ef;
+  border-bottom: 1px solid #e3e3e0;
+}
+
+.cs-browser-dots {
+  display: flex;
+  gap: 0.6cqw;
+}
+
+.cs-browser-dots i {
+  width: 0.9cqw;
+  height: 0.9cqw;
+  border-radius: 50%;
+  background: #d3d2cf;
+}
+
+.cs-browser-url {
+  flex: 0 1 34%;
+  margin: 0 auto;
+  padding: 0.5cqw 1.2cqw;
+  border-radius: 99px;
+  background: #fff;
+  color: #77727f;
+  font-size: 1.1cqw;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cs-browser-page {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.cs-browser-page img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cs-browser-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #0000004d 0%, #0000 32%, #0000 52%, #00000073 100%);
+}
+
+.cs-browser-nav {
+  position: absolute;
+  inset: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.2cqw 3cqw;
+  color: #fff;
+}
+
+.cs-browser-logo {
+  font-size: 2.2cqw;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.cs-browser-links {
+  display: flex;
+  gap: 2.6cqw;
+  font-size: 1.15cqw;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.cs-browser-hero {
+  position: absolute;
+  left: 3cqw;
+  right: 3cqw;
+  bottom: 3.4cqw;
+  color: #fff;
+}
+
+.cs-browser-hero p {
+  max-width: 62%;
+  margin: 0 0 2cqw;
+  font-size: 4.4cqw;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.cs-browser-cta {
+  display: inline-block;
+  padding: 1cqw 2cqw;
+  border-radius: 99px;
+  font-size: 1.2cqw;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* ---------- phone mockup ---------- */
+
+.cs-phone-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.cs-phone-stage-pattern {
+  position: absolute;
+  inset: 0;
+}
+
+.cs-phone {
+  position: relative;
+  width: 44cqw;
+  max-height: 92%;
+  aspect-ratio: 9 / 18.5;
+  min-height: 0;
+  overflow: hidden;
+  padding: 1.6cqw;
+  border-radius: 7cqw;
+  background: #161516;
+  box-shadow: 0 4cqw 8cqw #00000040;
+}
+
+.cs-conversations-image .cs-phone {
+  width: auto;
+  height: 88%;
+}
+
+.cs-phone-screen {
+  height: 100%;
+  border-radius: 5.6cqw;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-top: 9%;
+}
+
+.cs-phone-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  padding: 0 6% 4%;
+  font-size: clamp(9px, 2.6cqw, 14px);
+  color: #252325;
+}
+
+.cs-phone-avatar {
+  display: grid;
+  place-items: center;
+  width: 2.1em;
+  height: 2.1em;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0.9em;
+}
+
+.cs-phone-handle {
+  font-weight: 500;
+}
+
+.cs-phone-screen img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+.cs-phone-actions {
+  display: flex;
+  gap: 0.7em;
+  padding: 4% 6% 2%;
+  font-size: clamp(9px, 2.6cqw, 14px);
+}
+
+.cs-phone-actions i {
+  width: 1.2em;
+  height: 1.2em;
+  border: 1.5px solid #252325;
+  border-radius: 50%;
+}
+
+.cs-phone-caption {
+  margin: 0;
+  padding: 0 6%;
+  color: #51565b;
+  font-size: clamp(8px, 2.3cqw, 13px);
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cs-phone-caption b {
+  color: #252325;
+  font-weight: 500;
+}
+
+/* ---------- poster ---------- */
+
+.cs-poster {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 7cqw;
+  overflow: hidden;
+}
+
+.cs-poster-pattern {
+  position: absolute;
+  inset: 0;
+}
+
+.cs-poster-mark,
+.cs-poster-line {
+  position: relative;
+}
+
+.cs-poster-mark {
+  font-size: 4.2cqw;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.cs-poster-line {
+  max-width: 88%;
+  margin: 0;
+  font-size: 10cqw;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+}
+
+.cs-digital-gateway-image .cs-poster-line {
+  font-size: 7cqw;
+}
+
+/* ---------- brand board ---------- */
+
+.cs-board {
+  margin: 0;
+  container-type: inline-size;
+  background: #f2f2f0;
+}
+
+.cs-board-grid {
+  aspect-ratio: 1580 / 996;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+  grid-template-areas:
+    "a a t t l l"
+    "a a t t l l"
+    "a a p p p b"
+    "g g v v v b";
+  gap: 0.9cqw;
+  padding: 0.9cqw;
+}
+
+.cs-board-tile {
+  position: relative;
+  border-radius: 1cqw;
+  background: #fff;
+  overflow: hidden;
+  padding: 1.6cqw;
+  color: #252325;
+}
+
+.cs-board-label {
+  display: block;
+  color: #77727f;
+  font-size: 1cqw;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.cs-board-label--light {
+  position: relative;
+  z-index: 1;
+  color: #ffffffb3;
+}
+
+.cs-board-photo {
+  padding: 0;
+}
+
+.cs-board-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cs-board-photo--a {
+  grid-area: a;
+}
+
+.cs-board-photo--b {
+  grid-area: b;
+}
+
+.cs-board-type {
+  grid-area: t;
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-board-type-name {
+  margin: auto 0 1.2cqw;
+  font-size: 4.6cqw;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.cs-board-type-glyphs {
+  margin: 0;
+  color: #51565b;
+  font-size: 1.15cqw;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  word-break: break-all;
+}
+
+.cs-board-logo {
+  grid-area: l;
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-board-logo p {
+  margin: auto 0;
+  color: #fff;
+  font-size: 5.6cqw;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-align: center;
+  font-weight: 600;
+}
+
+.cs-board-palette {
+  grid-area: p;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 0.8cqw;
+  padding: 0.8cqw;
+  background: transparent;
+}
+
+.cs-board-swatch {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4cqw;
+  min-width: 0;
+}
+
+.cs-board-chip {
+  flex: 1;
+  border-radius: 0.8cqw;
+  box-shadow: inset 0 0 0 1px #0000000f;
+}
+
+.cs-board-swatch-name,
+.cs-board-swatch-hex {
+  font-size: 0.95cqw;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cs-board-swatch-hex {
+  color: #77727f;
+}
+
+.cs-board-pattern {
+  grid-area: g;
+}
+
+.cs-board-pattern > div {
+  position: absolute;
+  inset: 0;
+}
+
+.cs-board-voice {
+  grid-area: v;
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-board-voice ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4cqw 1.6cqw;
+  margin: auto 0 0.8cqw;
+  padding: 0;
+  list-style: none;
+  font-size: 2.3cqw;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.cs-board-line {
+  margin: 0;
+  color: #77727f;
+  font-size: 1.05cqw;
+  line-height: 1.3;
+}
+
+@container (max-width: 700px) {
+  .cs-board-grid {
+    aspect-ratio: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+    grid-auto-rows: minmax(120px, auto);
+    grid-template-areas:
+      "l l"
+      "a t"
+      "p p"
+      "g b"
+      "v v";
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .cs-board-tile {
+    border-radius: 8px;
+    padding: 14px;
+  }
+
+  .cs-board-label {
+    font-size: 11px;
+  }
+
+  .cs-board-type-name {
+    font-size: 26px;
+  }
+
+  .cs-board-type-glyphs {
+    font-size: 9px;
+  }
+
+  .cs-board-logo {
+    min-height: 150px;
+  }
+
+  .cs-board-logo p {
+    font-size: 34px;
+  }
+
+  .cs-board-photo {
+    aspect-ratio: 4 / 5;
+  }
+
+  .cs-board-palette {
+    min-height: 120px;
+    gap: 6px;
+    padding: 0;
+  }
+
+  .cs-board-chip {
+    border-radius: 6px;
+  }
+
+  .cs-board-swatch-name,
+  .cs-board-swatch-hex {
+    font-size: 9px;
+  }
+
+  .cs-board-voice ul {
+    font-size: 22px;
+    gap: 2px 12px;
+  }
+
+  .cs-board-line {
+    font-size: 12px;
+  }
+}
+
+/* ---------- stats & review markers ---------- */
+
+.cs-overview-stat-value.is-pending {
+  color: #c9c6cf;
+}
+
+.cs-ai-tag {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 2;
+  padding: 5px 9px;
+  border-radius: 99px;
+  background: #252325b3;
+  color: #fff;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+  backdrop-filter: blur(6px);
+}
+
+.cs-draft-badge {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 40;
+  max-width: calc(100vw - 32px);
+  margin: 0;
+  padding: 9px 14px;
+  border-radius: 99px;
+  background: #f7f7f5;
+  color: #252325;
+  font-size: 12px;
+  line-height: 1.2;
+  box-shadow: 0 6px 24px #2523252e;
+}

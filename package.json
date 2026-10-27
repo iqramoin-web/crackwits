@@ -1,0 +1,45 @@
+{
+  "name": "crackwits-site",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "content": "node scripts/gen-case-study-index.mjs",
+    "predev": "npm run content",
+    "dev": "next dev",
+    "prebuild": "npm run content",
+    "build": "next build",
+    "start": "npx serve out",
+    "typecheck": "tsc --noEmit",
+    "images": "node scripts/optimize-images.mjs",
+    "favicons": "node scripts/gen-favicons.mjs",
+    "review": "node scripts/gen-review.mjs"
+  },
+  "dependencies": {
+    "@fontsource/archivo-black": "^5.3.0",
+    "@fontsource/bricolage-grotesque": "^5.3.0",
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "@fontsource/dm-serif-display": "^5.3.0",
+    "@fontsource/fraunces": "^5.3.0",
+    "@fontsource/ibm-plex-sans-arabic": "^5.3.0",
+    "@fontsource/manrope": "^5.3.0",
+    "@fontsource/montserrat": "^5.3.0",
+    "@fontsource/outfit": "^5.3.0",
+    "@fontsource/playfair-display": "^5.3.0",
+    "@fontsource/space-grotesk": "^5.3.0",
+    "@fontsource/syne": "^5.3.0",
+    "@fontsource/unbounded": "^5.3.0",
+    "next": "15.3.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.30",
+    "@types/react": "19.1.6",
+    "@types/react-dom": "19.1.6",
+    "sharp": "0.34.5",
+    "typescript": "5.8.3"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}
