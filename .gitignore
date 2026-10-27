@@ -1,0 +1,32 @@
+# dependencies & build output
+node_modules
+.next
+out
+next-env.d.ts
+*.tsbuildinfo
+
+# local env
+.env*.local
+.env
+
+# local-only working material (not part of the site)
+_reference
+.claude
+.DS_Store
+*.zip
+
+# High-resolution masters stay local: the site uses the optimised WebP copies
+# in public/. Only the originals supplied by Crackwits are versioned.
+assets/originals/*
+!assets/originals/brand/
+!assets/originals/selected-work/
+assets/originals/selected-work/*
+!assets/originals/selected-work/*-original.webp
+!assets/originals/work/
+assets/originals/work/*
+!assets/originals/work/mylk-maam-*.webp
+!assets/originals/work/milkman-previous.webp
+
+# local copies of the export ZIPs
+crackwits-website/
+public-upload/
