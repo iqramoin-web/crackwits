@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Fragment, useEffect, useRef, useState, type CSSProperties, type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent } from "react";
+import { useEffect, useRef, useState, type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent } from "react";
 import { SiteFooter } from "@/components/SiteFooter";
+import { SplitWords } from "@/components/SplitWords";
 import { isEntryPageView } from "@/lib/siteSession";
 import { navigateWithViewTransition } from "@/lib/viewTransitionNav";
 
@@ -159,6 +160,7 @@ export function HomePage() {
   const drag = useRef({ active: false, startX: 0, scrollLeft: 0, moved: false });
   const detachDragListeners = useRef<(() => void) | null>(null);
   const suppressClick = useRef(false);
+  const lastCardPointer = useRef("mouse");
   const testimonialRefs = useRef<(HTMLElement | null)[]>([]);
   const cardAnimations = useRef(new Map<number, CardAnimation>());
   const transitionedRef = useRef(false);
@@ -431,9 +433,11 @@ export function HomePage() {
       detachDragListeners.current?.();
     }
     drag.current = { active: true, startX: event.clientX, scrollLeft: track.scrollLeft, moved: false };
-    track.setPointerCapture(event.pointerId);
-    track.classList.add("is-dragging");
+    // No pointer capture: it would retarget a tap's click from the card to
+    // the track, so a card could never open on touch. Below 1024px touch
+    // scrolls the track natively; above it the window listeners drag it.
     if (!desktop) return;
+    track.classList.add("is-dragging");
 
     const onMove = (moveEvent: PointerEvent) => {
       const state = drag.current;
@@ -495,7 +499,8 @@ export function HomePage() {
   }
 
   function onTestimonialClick(index: number) {
-    if (!isMobile() || suppressClick.current) return;
+    // Mouse users get hover-to-expand; taps toggle the card at any width.
+    if ((!isMobile() && lastCardPointer.current === "mouse") || suppressClick.current) return;
     const card = testimonialRefs.current[index];
     if (!card) return;
     testimonialRefs.current.forEach((other, otherIndex) => {
@@ -919,11 +924,14 @@ export function HomePage() {
                 testimonialRefs.current[index] = el;
               }}
               className="testimonial-card is-collapsed"
-              onPointerEnter={() => {
-                if (!isMobile()) expandCard(index);
+              onPointerDown={(event) => {
+                lastCardPointer.current = event.pointerType;
               }}
-              onPointerLeave={() => {
-                if (!isMobile()) collapseCard(index);
+              onPointerEnter={(event) => {
+                if (event.pointerType === "mouse" && !isMobile()) expandCard(index);
+              }}
+              onPointerLeave={(event) => {
+                if (event.pointerType === "mouse" && !isMobile()) collapseCard(index);
               }}
               onClick={() => onTestimonialClick(index)}
             >
@@ -942,18 +950,4 @@ export function HomePage() {
       <SiteFooter footerRef={footerRef} visible={footerVisible} />
     </main>
   );
-}
-
-/** Splits text into word spans (`--i` = index) for staggered reveals. */
-// The space sits between the inline-block words: inside them it would be
-// trimmed and the words would run together.
-function SplitWords({ text, mask = false }: { text: string; mask?: boolean }) {
-  return text.split(" ").map((word, i) => (
-    <Fragment key={i}>
-      {i > 0 && " "}
-      <span className="word" style={{ "--i": i } as CSSProperties}>
-        {mask ? <span>{word}</span> : word}
-      </span>
-    </Fragment>
-  ));
 }

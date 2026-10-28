@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState, type PointerEvent } from "react";
+import { Fragment, useEffect, useRef, useState, type CSSProperties, type PointerEvent } from "react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MenuOverlay } from "@/components/SiteHeader";
+import { SplitWords, wordCount } from "@/components/SplitWords";
 import { useMenuBodyClass } from "@/lib/useInView";
 
 const CAROUSEL_IMAGES = [
@@ -21,6 +22,24 @@ const STATISTICS = [
   { value: 88, suffix: "%", label: "Referral Rate" },
   { value: 14, suffix: "+", label: "Countries" },
 ];
+
+/** "About us" statement; desktop breaks between these lines. */
+const STORY_LINES = [
+  "Our culture is wired with the belief that the strongest brands",
+  "are never shaped by convention. They are shaped by sharp",
+  "thinking, strategic clarity, and the courage to push beyond",
+  "what is expected.",
+];
+
+const STORY_SUPPORT =
+  "With a mindset rooted in challenging limits and uncovering smarter ways forward, the agency creates work that is designed to perform, scale, and leave a lasting mark.";
+
+/** Count-up length for the statistics, and the gap between each stat starting. */
+const COUNT_MS = 1200;
+const COUNT_STAGGER_MS = 120;
+
+/** Word index each line starts at, so a multi-line text staggers as one run. */
+const lineOffsets = (lines: string[]) => lines.map((_, i) => lines.slice(0, i).reduce((n, l) => n + wordCount(l), 0));
 
 const COMMITMENT_TEXT =
   "At CRACKWITS, we are committed to creating meaningful brand experiences that combine strategy, creativity, and technology.";
@@ -94,21 +113,36 @@ type Preview = { src: string; name: string; x: number; y: number };
 
 const clamp01 = (value: number) => Math.min(Math.max(value, 0), 1);
 
-function CommitmentLine({ line, lineIndex, variant }: { line: string; lineIndex: number; variant: "desktop" | "mobile" }) {
+function CommitmentLine({ line, offset, variant }: { line: string; offset: number; variant: "desktop" | "mobile" }) {
   return (
-    <span className={`about-commitment-line about-commitment-line--${variant}`}>
-      {line.split(" ").map((word, wordIndex) => (
-        <span
-          key={`${variant === "mobile" ? "mobile-" : ""}${lineIndex}-${word}-${wordIndex}`}
-          className="about-commitment-word"
-          aria-hidden="true"
-        >
-          {word}
-          {" "}
-        </span>
-      ))}
+    <span className={`about-commitment-line about-commitment-line--${variant}`} aria-hidden="true">
+      <SplitWords text={line} mask offset={offset} />
     </span>
   );
+}
+
+/** Counts from 0 up to `value` once `start` is true (ease-out, so it lands softly). */
+function CountUp({ value, start, delay }: { value: number; start: boolean; delay: number }) {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!start) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setCurrent(value);
+      return;
+    }
+    const begin = performance.now() + delay;
+    let frame = 0;
+    const tick = (now: number) => {
+      const progress = clamp01((now - begin) / COUNT_MS);
+      setCurrent(Math.round(value * (1 - Math.pow(1 - progress, 4))));
+      if (progress < 1) frame = window.requestAnimationFrame(tick);
+    };
+    frame = window.requestAnimationFrame(tick);
+    return () => window.cancelAnimationFrame(frame);
+  }, [start, value, delay]);
+
+  return <span aria-hidden="true">{current}</span>;
 }
 
 export function AboutPage() {
@@ -118,6 +152,7 @@ export function AboutPage() {
   const [approachVisible, setApproachVisible] = useState(false);
   const [leadTeamVisible, setLeadTeamVisible] = useState(false);
   const [statisticsVisible, setStatisticsVisible] = useState(false);
+  const [commitmentVisible, setCommitmentVisible] = useState(false);
   const [footerVisible, setFooterVisible] = useState(false);
   const [preview, setPreview] = useState<Preview | null>(null);
   const storyRef = useRef<HTMLElement | null>(null);
@@ -181,57 +216,43 @@ export function AboutPage() {
     };
   }, []);
 
-  // Scroll-scrubbed word reveal for the commitment heading.
+  // Commitment: the heading rises in word by word, then the copy and CTA follow.
   useEffect(() => {
     const section = commitmentRef.current;
     if (!section) return;
-    const words = Array.from(section.querySelectorAll<HTMLElement>(".about-commitment-word"));
-    const eyebrow = section.querySelector<HTMLElement>(".about-commitment-eyebrow");
-    const support = section.querySelector<HTMLElement>(".about-commitment-support");
-    const cta = section.querySelector<HTMLElement>(".about-commitment-cta");
-    let frame = 0;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setCommitmentVisible(true);
+          observer.unobserve(section);
+        }
+      },
+      { threshold: 0.25 },
+    );
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
 
-    const render = () => {
-      const rect = section.getBoundingClientRect();
-      const start = window.innerHeight * 0.9;
-      const end = window.innerHeight * 0.1;
-      const progress = clamp01((start - rect.top) / Math.max(start - end, 1));
-      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-      words.forEach((word, index) => {
-        const wordsProgress = reduced ? 1 : clamp01((progress - 0.12) / 0.62);
-        const wordProgress = reduced ? 1 : clamp01(wordsProgress * (words.length + 0.5) - index);
-        word.style.opacity = String(0.08 + wordProgress * 0.92);
-        word.style.transform = `translate3d(${(1 - wordProgress) * 72}px, 0, 0)`;
-      });
-
-      const eyebrowProgress = reduced ? 1 : clamp01(progress * 2.4);
-      const supportProgress = reduced ? 1 : clamp01((progress - 0.73) / 0.12);
-      const ctaProgress = reduced ? 1 : clamp01((progress - 0.84) / 0.12);
-      if (eyebrow) eyebrow.style.transform = `translate3d(${(1 - eyebrowProgress) * 42}px, 0, 0)`;
-      if (support) {
-        support.style.opacity = String(supportProgress);
-        support.style.transform = `translate3d(${(1 - supportProgress) * 34}px, 0, 0)`;
-      }
-      if (cta) {
-        cta.style.opacity = String(ctaProgress);
-        cta.style.transform = `translate3d(${(1 - ctaProgress) * 28}px, 0, 0)`;
-      }
-    };
-
-    const schedule = () => {
-      window.cancelAnimationFrame(frame);
-      frame = window.requestAnimationFrame(render);
-    };
-
-    render();
-    window.addEventListener("scroll", schedule, { passive: true });
-    window.addEventListener("resize", schedule);
-    return () => {
-      window.cancelAnimationFrame(frame);
-      window.removeEventListener("scroll", schedule);
-      window.removeEventListener("resize", schedule);
-    };
+  // Approach cards appear one by one as each reaches the viewport; cards that
+  // arrive together (side by side on desktop) are staggered.
+  useEffect(() => {
+    const cards = Array.from(approachRef.current?.querySelectorAll<HTMLElement>(".about-approach-card") ?? []);
+    if (!cards.length) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries
+          .filter((entry) => entry.isIntersecting || entry.boundingClientRect.bottom < 0)
+          .forEach((entry, i) => {
+            const card = entry.target as HTMLElement;
+            card.style.setProperty("--card-delay", `${i * 0.2}s`);
+            card.classList.add("is-card-visible");
+            observer.unobserve(card);
+          });
+      },
+      { threshold: 0.2, rootMargin: "0px 0px -8% 0px" },
+    );
+    cards.forEach((card) => observer.observe(card));
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -403,21 +424,23 @@ export function AboutPage() {
         <p className="about-story-eyebrow">About us</p>
         <div id="about-story-title" className="about-story-main">
           <div className="about-story-line">
-            <span>
-              Our culture is wired with the belief that the strongest brands
-              <br className="about-story-desktop-break" />
-              {" are never shaped by convention. They are shaped by sharp"}
-              <br className="about-story-desktop-break" />
-              {" thinking, strategic clarity, and the courage to push beyond"}
-              <br className="about-story-desktop-break" />
-              {" what is expected."}
+            <span className="split-rise">
+              {STORY_LINES.map((line, index) => (
+                <Fragment key={index}>
+                  {index > 0 && (
+                    <>
+                      <br className="about-story-desktop-break" />{" "}
+                    </>
+                  )}
+                  <SplitWords text={line} mask offset={lineOffsets(STORY_LINES)[index]} />
+                </Fragment>
+              ))}
             </span>
           </div>
         </div>
         <div className="about-story-support">
-          <p className="about-story-line">
-            With a mindset rooted in challenging limits and uncovering smarter ways forward, the agency creates work
-            that is designed to perform, scale, and leave a lasting mark.
+          <p className="about-story-line split-fade">
+            <SplitWords text={STORY_SUPPORT} />
           </p>
         </div>
       </section>
@@ -453,10 +476,10 @@ export function AboutPage() {
               </h2>
             </div>
             <div className="about-statistics-grid">
-              {STATISTICS.map((stat) => (
-                <div key={stat.label} className="about-statistic">
-                  <div className="about-statistic-value">
-                    <span>{stat.value}</span>
+              {STATISTICS.map((stat, index) => (
+                <div key={stat.label} className="about-statistic" style={{ "--stat-i": index } as CSSProperties}>
+                  <div className="about-statistic-value" role="img" aria-label={`${stat.value}${stat.suffix}`}>
+                    <CountUp value={stat.value} start={statisticsVisible} delay={index * COUNT_STAGGER_MS} />
                     <span className="about-statistic-suffix" aria-hidden="true">
                       {stat.suffix}
                     </span>
@@ -637,17 +660,31 @@ export function AboutPage() {
           )}
         </section>
 
-        <section ref={commitmentRef} className="about-commitment" aria-labelledby="about-commitment-title">
+        <section
+          ref={commitmentRef}
+          className={`about-commitment${commitmentVisible ? " is-visible" : ""}`}
+          aria-labelledby="about-commitment-title"
+        >
           <div className="about-commitment-copy">
             <div className="about-commitment-eyebrow-mask">
               <p className="about-commitment-eyebrow">Commitment</p>
             </div>
-            <h2 id="about-commitment-title" className="commitment-heading" aria-label={COMMITMENT_TEXT}>
+            <h2 id="about-commitment-title" className="commitment-heading split-rise" aria-label={COMMITMENT_TEXT}>
               {COMMITMENT_LINES_DESKTOP.map((line, index) => (
-                <CommitmentLine key={line} line={line} lineIndex={index} variant="desktop" />
+                <CommitmentLine
+                  key={line}
+                  line={line}
+                  offset={lineOffsets(COMMITMENT_LINES_DESKTOP)[index]}
+                  variant="desktop"
+                />
               ))}
               {COMMITMENT_LINES_MOBILE.map((line, index) => (
-                <CommitmentLine key={line} line={line} lineIndex={index} variant="mobile" />
+                <CommitmentLine
+                  key={line}
+                  line={line}
+                  offset={lineOffsets(COMMITMENT_LINES_MOBILE)[index]}
+                  variant="mobile"
+                />
               ))}
             </h2>
             <p className="about-commitment-support">
