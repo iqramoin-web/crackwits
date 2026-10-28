@@ -6,7 +6,8 @@
  *  4. the page-change curtain and page entrance;
  *  5. the word-by-word heading reveal;
  *  6. the header blur in every browser;
- *  7. keeping the hero inside small phone screens.
+ *  7. keeping the hero inside small phone screens;
+ *  8. the four-line testimonial preview.
  */
 
 :root {
@@ -328,6 +329,19 @@ main.page-enter > :is(section, footer, div:not(.menu-overlay):not(.loader)) {
  */
 section.hero {
   overflow-x: clip;
+}
+
+/* ---------- 8. testimonial preview ---------- */
+
+/*
+ * The collapsed quote is stretched to its 108px wrapper, but four lines are
+ * only 107.5px at 21px and 97px at 19px (≤ 900px), so the top of a fifth
+ * line showed. -webkit-line-clamp only limits an auto height, so size the
+ * preview to exactly four lines (line-height 1.28) at every breakpoint.
+ */
+.testimonial-card-copy--short {
+  bottom: auto;
+  height: calc(4 * 1.28em);
 }
 
 @media (prefers-reduced-motion: reduce) {
