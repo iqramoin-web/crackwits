@@ -4,7 +4,9 @@
  *  2. the reworked "Since 2020" intro reveal;
  *  3. the shared `.reveal` entrance for sections that had none;
  *  4. the page-change curtain and page entrance;
- *  5. the word-by-word heading reveal.
+ *  5. the word-by-word heading reveal;
+ *  6. the header blur in every browser;
+ *  7. keeping the hero inside small phone screens.
  */
 
 :root {
@@ -295,6 +297,37 @@ main.page-enter > :is(section, footer, div:not(.menu-overlay):not(.loader)) {
 .wr-heading span:not(.wr-word):not(.wr-inner) {
   opacity: 1 !important;
   transform: none !important;
+}
+
+/* ---------- 6. header blur ---------- */
+
+/*
+ * The original stylesheet only carries the -webkit- prefixed backdrop blur,
+ * which Safari understands but Chrome, Edge and Firefox ignore, so on
+ * Windows the header bar was flat. Same values, standard property.
+ */
+.header::before {
+  -webkit-backdrop-filter: blur(20px) saturate(1);
+  backdrop-filter: blur(20px) saturate(1);
+}
+
+@media (width <= 767px) {
+  body::before {
+    -webkit-backdrop-filter: blur(20px) saturate(1);
+    backdrop-filter: blur(20px) saturate(1);
+  }
+}
+
+/* ---------- 7. hero on small phones ---------- */
+
+/*
+ * While the loader runs, the hero headline starts larger than its final size
+ * on one unbroken line per row, which is wider than a small phone (e.g.
+ * 320px). Clip it to the screen so the page can't be panned sideways; the
+ * hero is full-width, so nothing that was visible is lost.
+ */
+section.hero {
+  overflow-x: clip;
 }
 
 @media (prefers-reduced-motion: reduce) {
