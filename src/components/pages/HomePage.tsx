@@ -67,7 +67,7 @@ const PARTNER_LOGOS = [
   ["special-events", "Special Events", 395, 44],
   ["sunrise-waterpark", "Sunrise Waterpark", 240, 56],
   ["buildoser", "Buildöser", 251, 44],
-  ["tekzone", "Tekzone", 307, 54],
+  ["tekzone", "Tekzone", 251, 54],
   ["pf-changs", "P.F. Chang’s", 290, 46],
   ["ovo", "OVO", 194, 54],
   ["cubix", "Cubix", 129, 76],
