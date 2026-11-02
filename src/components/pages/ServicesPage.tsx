@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SplitWords } from "@/components/SplitWords";
 
 const SERVICES = [
   {
@@ -199,12 +200,16 @@ export function ServicesPage() {
             >
               <div className="services-page-copy">
                 <h2>{service.title}</h2>
-                <p>{service.description}</p>
+                <p className="split-fade">
+                  <SplitWords text={service.description} />
+                </p>
               </div>
               <div className="services-page-media">
                 <div className="services-page-tags" aria-label={`${service.title} services`}>
-                  {service.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
+                  {service.tags.map((tag, tagIndex) => (
+                    <span key={tag} style={{ "--tag-i": tagIndex } as CSSProperties}>
+                      {tag}
+                    </span>
                   ))}
                 </div>
                 <div className="services-page-video">
@@ -229,6 +234,7 @@ export function ServicesPage() {
           <div className="services-industries-interaction">
             <div className="services-industries-image-stage" aria-live="polite">
               <img
+                key={activeImage}
                 className="services-industry-stage-image is-active"
                 src={activeImage}
                 alt={`${activeName} industry`}
@@ -242,6 +248,7 @@ export function ServicesPage() {
                   type="button"
                   role="listitem"
                   className={`services-industry-link${activeIndustry === index ? " is-active" : ""}`}
+                  style={{ "--industry-i": index } as CSSProperties}
                   onPointerEnter={() => setActiveIndustry(index)}
                   onFocus={() => setActiveIndustry(index)}
                   onClick={() => setActiveIndustry(index)}

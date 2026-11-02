@@ -5,8 +5,12 @@ import { useEffect } from "react";
 import { afterLoader } from "@/lib/afterLoader";
 
 const HEADINGS = "main h1, main h2, main h3";
-/** Headings left alone: chrome, the loader, and ones already split by hand. */
-const SKIP = "header, .menu-overlay, .loader, .since-intro-title";
+/**
+ * Headings left alone: chrome, the loader, ones already split by hand, and the
+ * services intro, whose mobile copy is drawn by `span::after` rules that
+ * would repeat on every word span.
+ */
+const SKIP = "header, .menu-overlay, .loader, .since-intro-title, .services-page-intro h1";
 const WORD_STAGGER = 0.045;
 const MAX_DELAY = 0.9;
 

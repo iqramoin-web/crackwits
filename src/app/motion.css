@@ -11,7 +11,8 @@
  *  9. word-by-word text and the About page's stats, approach and
  *     commitment entrances;
  * 10. the partner logo marquee;
- * 11. the homepage services' sub-headings and videos.
+ * 11. the homepage services' sub-headings and videos;
+ * 12. the services page's rows and industries.
  */
 
 :root {
@@ -726,6 +727,137 @@ section.hero {
   .services-section .service-details-inner span,
   .services-section .service-preview video,
   .services-section .service-mobile-image video {
+    animation: none !important;
+  }
+}
+
+/* ---------- 12. services page ---------- */
+
+/*
+ * The original only fades each row's copy and media in as two blocks, and
+ * the industries section just changes colour. Each part now has its own
+ * staggered entrance. Animations use `translate`, `scale` and `clip-path`,
+ * which the original's transform / transition rules (some !important on
+ * mobile) don't touch.
+ */
+@keyframes svc-rise {
+  from {
+    translate: 0 0.9em;
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    translate: 0 0;
+    clip-path: inset(-20% -10% -20% -10%);
+  }
+}
+
+@keyframes svc-wipe {
+  from {
+    clip-path: inset(100% 0 0 0 round 10px);
+  }
+  to {
+    clip-path: inset(0 round 10px);
+  }
+}
+
+@keyframes svc-settle {
+  from {
+    scale: 1.14;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes svc-draw {
+  from {
+    scale: 0 1;
+  }
+  to {
+    scale: 1 1;
+  }
+}
+
+@keyframes svc-swap {
+  from {
+    opacity: 0;
+    scale: 1.08;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/* Service rows. The hero section (which wraps the rows) is visible from the
+   start, so the word reveal is scoped to each row's own .is-visible. */
+.services-page .services-page-feature .split-fade .word {
+  opacity: 0;
+  transform: translateY(0.45em);
+}
+
+.services-page .services-page-feature.is-visible .split-fade .word {
+  --split-delay: 0.35s;
+  --split-step: 0.012s;
+  opacity: 1;
+  transform: none;
+}
+
+.services-page .services-page-feature.is-visible .services-page-tags span {
+  animation: svc-rise 0.75s var(--motion-ease) both;
+  animation-delay: calc(0.45s + var(--tag-i, 0) * 0.09s);
+}
+
+.services-page .services-page-feature.is-visible .services-page-video {
+  animation: svc-wipe 1.15s var(--motion-ease) 0.25s both;
+}
+
+.services-page .services-page-feature.is-visible .services-page-video video {
+  animation: svc-settle 1.6s var(--motion-ease) 0.25s both;
+}
+
+.services-page .services-page-feature::after {
+  transform-origin: 0 50%;
+}
+
+.services-page .services-page-feature.is-visible::after {
+  animation: svc-draw 1.1s var(--motion-ease) 0.5s both;
+}
+
+/* Industries. */
+.services-industries.is-visible .services-industries-eyebrow {
+  animation: svc-rise 0.8s var(--motion-ease) 0.15s both;
+}
+
+.services-industries.is-visible .services-industry-link {
+  animation: svc-rise 0.8s var(--motion-ease) both;
+  animation-delay: calc(0.25s + var(--industry-i, 0) * 0.06s);
+}
+
+.services-industries.is-visible .services-industries-image-stage {
+  animation: svc-wipe 1.2s var(--motion-ease) 0.35s both;
+}
+
+/* A new image (keyed by industry) eases in instead of cutting over. */
+.services-industries .services-industry-stage-image.is-active {
+  animation: svc-swap 0.7s var(--motion-ease) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services-page .services-page-feature .split-fade .word {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .services-page .services-page-tags span,
+  .services-page .services-page-video,
+  .services-page .services-page-video video,
+  .services-page .services-page-feature::after,
+  .services-industries .services-industries-eyebrow,
+  .services-industries .services-industry-link,
+  .services-industries .services-industries-image-stage,
+  .services-industries .services-industry-stage-image {
     animation: none !important;
   }
 }
