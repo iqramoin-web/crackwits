@@ -439,8 +439,12 @@ export function AboutPage() {
           </div>
         </div>
         <div className="about-story-support">
-          <p className="about-story-line split-fade">
-            <SplitWords text={STORY_SUPPORT} />
+          {/* Wrapper span: the original `.about-story-line > span` rules (one
+              block per line) must not reach the individual word spans. */}
+          <p className="about-story-line">
+            <span className="split-fade">
+              <SplitWords text={STORY_SUPPORT} />
+            </span>
           </p>
         </div>
       </section>

@@ -405,13 +405,50 @@ section.hero {
   transform: none;
 }
 
+/* Statement: a clear word-by-word reveal; each word fades as it rises, one
+   after another, rather than whole lines appearing to move together. */
 .about-site .about-story .split-rise {
   --split-delay: 0.15s;
-  --split-step: 0.028s;
+  --split-step: 0.055s;
 }
 
-.about-site .about-story .split-fade {
-  --split-delay: 0.9s;
+.about-site .about-story .split-rise .word > span {
+  opacity: 0;
+  transition:
+    transform 0.9s var(--motion-ease),
+    opacity 0.7s var(--motion-ease);
+  transition-delay: calc(var(--split-delay, 0s) + var(--i) * var(--split-step, 0.03s));
+}
+
+.about-site .about-story.is-visible .split-rise .word > span {
+  opacity: 1;
+}
+
+/* Supporting paragraph: one continuous, centred paragraph that wraps
+   naturally (the original's per-line spans were nowrap blocks). */
+.about-site .about-story .about-story-support > .about-story-line {
+  width: 100%;
+  max-width: 900px;
+  margin-inline: auto;
+  text-align: center;
+  white-space: normal;
+}
+
+.about-site .about-story .about-story-support .about-story-line > .split-fade {
+  --split-delay: 1.4s;
+  --split-step: 0.02s;
+  display: inline;
+  white-space: normal;
+  color: inherit;
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+@media (width <= 767px) {
+  .about-site .about-story .about-story-support > .about-story-line {
+    max-width: 100%;
+  }
 }
 
 /* Statistics: numbers count up (<CountUp>), then the symbol pops in and the
