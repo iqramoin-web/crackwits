@@ -565,27 +565,91 @@ section.hero {
 /* ---------- 10. partner logos ---------- */
 
 /*
- * 31 logos instead of the original 11: the marquee durations scale with the
- * logo count (34s for 11) so the logos still drift past at the same speed.
+ * Each logo shows at the size it was designed at (its SVG's width/height,
+ * the height passed in as --logo-h) instead of being stretched or squeezed
+ * into one fixed box, with a single scale per breakpoint. Heights are capped
+ * at 80 (×scale) so the tall emblem logos (EDO, COYA, Chanca) don't
+ * dominate; nothing is ever drawn larger than designed.
+ *
  * Desktop shows one row of all logos; mobile splits them over two rows that
- * run in opposite directions.
+ * run in opposite directions. Durations keep the original drift speed.
  */
+.partners-carousel {
+  --partner-scale: 1;
+  --partner-gap: 72px;
+  --partner-pad: 64px;
+}
+
+.partners-carousel > .partners-track {
+  gap: var(--partner-gap);
+  padding-inline: var(--partner-pad);
+  animation-name: partners-marquee-sized;
+}
+
+/*
+ * One copy of the logos plus one gap. The original keyframes also shifted by
+ * the track's side padding, so the loop jumped by that much each time round.
+ */
+@keyframes partners-marquee-sized {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% + var(--partner-pad) - var(--partner-gap) / 2));
+  }
+}
+
+.partners-carousel .partner-logo {
+  width: auto;
+  height: calc(80px * var(--partner-scale));
+}
+
+.partners-carousel .partner-logo img {
+  width: auto;
+  height: calc(min(var(--logo-h), 80) * var(--partner-scale) * 1px);
+  max-width: none;
+  object-fit: contain;
+}
+
 .partners-carousel > .partners-track--desktop {
-  animation-duration: 96s;
+  animation-duration: 92s;
 }
 
 .partners-carousel > .partners-track--mobile {
   display: none;
-  animation-duration: 49s;
+  animation-duration: 40s;
+}
+
+@media (width <= 900px) {
+  .partners-carousel {
+    --partner-scale: 0.8;
+    --partner-gap: 56px;
+    --partner-pad: 20px;
+  }
+
+  .partners-carousel > .partners-track--desktop {
+    animation-duration: 73s;
+  }
 }
 
 @media (width <= 767px) {
+  .partners-carousel {
+    --partner-scale: 0.6;
+    --partner-gap: 36px;
+  }
+
   .partners-carousel > .partners-track--desktop {
     display: none;
   }
 
   .partners-carousel > .partners-track--mobile {
     display: flex;
+  }
+}
+
+@media (width <= 580px) {
+  .partners-carousel {
+    --partner-pad: 18px;
   }
 }
 

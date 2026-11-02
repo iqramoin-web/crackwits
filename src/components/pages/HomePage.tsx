@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState, type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent } from "react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SplitWords } from "@/components/SplitWords";
 import { isEntryPageView } from "@/lib/siteSession";
@@ -51,39 +51,39 @@ const SERVICE_PREVIEW_VIDEOS = [
   "/services/hpservices2.mp4",
 ];
 
-/** [file in /public/partners, brand name] */
+/** [SVG in /public/partners, brand name, width, height]: the size each logo was designed at. */
 const PARTNER_LOGOS = [
-  ["bei", "Bei"],
-  ["ashas", "Asha’s"],
-  ["kcamp", "KCamp"],
-  ["ventri", "Ventri Group"],
-  ["homey-ways", "Homey Ways"],
-  ["twig", "Twig"],
-  ["illicocash", "illicocash"],
-  ["rawbank", "Rawbank"],
-  ["mylk-maam", "Mylk Ma’am"],
-  ["kidzania", "KidZania"],
-  ["cheesecake-factory", "The Cheesecake Factory"],
-  ["special-events", "Special Events"],
-  ["sunrise-waterpark", "Sunrise Waterpark"],
-  ["buildoser", "Buildöser"],
-  ["tekzone", "Tekzone"],
-  ["pf-changs", "P.F. Chang’s"],
-  ["ovo", "OVO"],
-  ["cubix", "Cubix"],
-  ["dean-deluca", "Dean & DeLuca"],
-  ["altojjar", "Altojjar"],
-  ["quest", "Quest"],
-  ["fondation-rawji", "Fondation Rawji"],
-  ["pointe-anglaise", "Pointe Anglaise"],
-  ["pizza-express", "Pizza Express"],
-  ["coya", "COYA"],
-  ["chanca", "Chanca by COYA"],
-  ["edo", "EDO"],
-  ["lillajar", "Lillajar"],
-  ["trs-polymers", "TRS Polymers"],
-  ["britam-arabia", "Britam Arabia"],
-  ["965smile", "965 Smile"],
+  ["bei", "Bei", 160, 64],
+  ["ashas", "Asha’s", 206, 64],
+  ["kcamp", "KCamp", 208, 57],
+  ["ventri", "Ventri Group", 178, 46],
+  ["homey-ways", "Homey Ways", 185, 50],
+  ["twig", "Twig", 176, 46],
+  ["illicocash", "illicocash", 258, 54],
+  ["rawbank", "Rawbank", 264, 64],
+  ["mylk-maam", "Mylk Ma’am", 227, 80],
+  ["kidzania", "KidZania", 257, 52],
+  ["cheesecake-factory", "The Cheesecake Factory", 386, 60],
+  ["special-events", "Special Events", 395, 44],
+  ["sunrise-waterpark", "Sunrise Waterpark", 240, 56],
+  ["buildoser", "Buildöser", 251, 44],
+  ["tekzone", "Tekzone", 307, 54],
+  ["pf-changs", "P.F. Chang’s", 290, 46],
+  ["ovo", "OVO", 194, 54],
+  ["cubix", "Cubix", 129, 76],
+  ["dean-deluca", "Dean & DeLuca", 279, 48],
+  ["altojjar", "Altojjar", 128, 72],
+  ["quest", "Quest", 115, 72],
+  ["fondation-rawji", "Fondation Rawji", 130, 70],
+  ["pointe-anglaise", "Pointe Anglaise", 212, 66],
+  ["pizza-express", "Pizza Express", 180, 76],
+  ["coya", "COYA", 132, 88],
+  ["chanca", "Chanca by COYA", 137, 88],
+  ["edo", "EDO", 111, 102],
+  ["lillajar", "Lillajar", 179, 56],
+  ["trs-polymers", "TRS Polymers", 78, 60],
+  ["britam-arabia", "Britam Arabia", 88, 59],
+  ["965smile", "965 Smile", 163, 55],
 ] as const;
 
 /** On mobile the logos are split across two rows running in opposite directions. */
@@ -897,9 +897,15 @@ export function HomePage() {
         <div className="partners-carousel" aria-label="Our partners">
           <div className="partners-track partners-track--desktop">
             {[0, 1].map((copy) =>
-              PARTNER_LOGOS.map(([logo, name]) => (
+              PARTNER_LOGOS.map(([logo, name, width, height]) => (
                 <div key={`${copy}-${logo}`} className="partner-logo">
-                  <img src={`/partners/${logo}.png`} alt={copy === 0 ? name : ""} />
+                  <img
+                    src={`/partners/${logo}.svg`}
+                    alt={copy === 0 ? name : ""}
+                    width={width}
+                    height={height}
+                    style={{ "--logo-h": height } as CSSProperties}
+                  />
                 </div>
               )),
             )}
@@ -911,9 +917,15 @@ export function HomePage() {
               aria-hidden="true"
             >
               {[0, 1].map((copy) =>
-                row.map(([logo]) => (
+                row.map(([logo, , width, height]) => (
                   <div key={`mobile-${copy}-${logo}`} className="partner-logo">
-                    <img src={`/partners/${logo}.png`} alt="" />
+                    <img
+                      src={`/partners/${logo}.svg`}
+                      alt=""
+                      width={width}
+                      height={height}
+                      style={{ "--logo-h": height } as CSSProperties}
+                    />
                   </div>
                 )),
               )}
