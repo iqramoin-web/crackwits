@@ -43,6 +43,19 @@ const STORY_SUPPORT_LINES = [
 const COUNT_MS = 1200;
 const COUNT_STAGGER_MS = 120;
 
+/**
+ * Approach circles sit in a 2-column grid ([column, row] cells). Each card's
+ * path lists where its outline circle goes, step by step; it swaps with the
+ * filled circle already there. Starts from the outline's home cell.
+ */
+type Cell = [number, number];
+const CIRCLE_PATHS: Cell[][] = [
+  [[1, 0], [0, 0]],
+  [[1, 0], [0, 1], [0, 0]],
+  [[1, 1], [0, 0], [0, 1], [1, 0]],
+];
+const CIRCLE_STEP_MS = 1000;
+
 /** Word index each line starts at, so a multi-line text staggers as one run. */
 const lineOffsets = (lines: string[]) => lines.map((_, i) => lines.slice(0, i).reduce((n, l) => n + wordCount(l), 0));
 
@@ -258,6 +271,72 @@ export function AboutPage() {
     );
     cards.forEach((card) => observer.observe(card));
     return () => observer.disconnect();
+  }, []);
+
+  // Approach circles: the outline circle swaps places with a filled one, one
+  // step per second, along a fixed path round the card's 2-column grid. Plays
+  // while hovered (mouse) or while on screen (touch); a swap in progress
+  // always finishes, so the circles never stop half-way.
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const cards = Array.from(approachRef.current?.querySelectorAll<HTMLElement>(".about-approach-card") ?? []);
+    const players = cards.flatMap((card, cardIndex) => {
+      const circles = Array.from(card.querySelectorAll<HTMLElement>(".about-approach-circles span"));
+      const path = CIRCLE_PATHS[cardIndex];
+      if (!path || !circles.length) return [];
+      const home = circles.map((_, i) => [i % 2, Math.floor(i / 2)] as Cell);
+      const cells = home.map((cell) => [...cell] as Cell);
+      const outline = circles.findIndex((circle) => !circle.classList.contains("is-solid"));
+      let step = 0;
+      let timer = 0;
+      const advance = () => {
+        step = (step + 1) % path.length;
+        const target = path[step];
+        const other = cells.findIndex((cell) => cell[0] === target[0] && cell[1] === target[1]);
+        if (other >= 0) cells[other] = cells[outline];
+        cells[outline] = target;
+        circles.forEach((circle, i) => {
+          circle.style.translate = `calc(${cells[i][0] - home[i][0]} * var(--circle-step)) calc(${cells[i][1] - home[i][1]} * var(--circle-step))`;
+        });
+      };
+      return [
+        {
+          card,
+          start() {
+            if (timer) return;
+            advance();
+            timer = window.setInterval(advance, CIRCLE_STEP_MS);
+          },
+          stop() {
+            window.clearInterval(timer);
+            timer = 0;
+          },
+        },
+      ];
+    });
+
+    const touch = !window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    const cleanups = players.map((player) => {
+      if (touch) {
+        const observer = new IntersectionObserver(([entry]) => (entry.isIntersecting ? player.start() : player.stop()), {
+          threshold: 0.4,
+        });
+        observer.observe(player.card);
+        return () => observer.disconnect();
+      }
+      const enter = () => player.start();
+      const leave = () => player.stop();
+      player.card.addEventListener("pointerenter", enter);
+      player.card.addEventListener("pointerleave", leave);
+      return () => {
+        player.card.removeEventListener("pointerenter", enter);
+        player.card.removeEventListener("pointerleave", leave);
+      };
+    });
+    return () => {
+      cleanups.forEach((cleanup) => cleanup());
+      players.forEach((player) => player.stop());
+    };
   }, []);
 
   useEffect(() => {

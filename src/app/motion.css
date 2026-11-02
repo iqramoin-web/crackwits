@@ -527,11 +527,19 @@ section.hero {
 .about-approach-circles span:nth-child(3) { --ci: 2; }
 .about-approach-circles span:nth-child(4) { --ci: 3; }
 
+/* Circles in a 2-column grid, always two rows tall so every card's copy
+   lines up. AboutPage moves them a cell at a time via `translate`. */
+.about-site .about-approach-circles {
+  --circle-step: 22px;
+  grid-template-columns: repeat(2, 22px);
+  grid-auto-flow: row;
+  grid-auto-columns: auto;
+  align-content: start;
+  height: 44px;
+}
+
 .about-site .about-approach-circles span {
-  transition:
-    transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
-    background-color 0.35s ease;
-  transition-delay: calc(var(--ci, 0) * 55ms);
+  transition: translate 0.66s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 /* Backwards fill only, so the hover transforms below still apply afterwards. */
@@ -547,31 +555,15 @@ section.hero {
   }
 }
 
-/* Hover: the circles spread into a wave and swap fill with outline. */
-@media (hover: hover) and (pointer: fine) {
-  .about-site .about-approach-card:hover .about-approach-circles span:nth-child(1) {
-    transform: translate(-6px, -7px) scale(1.12);
-  }
+/* The original's small hover nudge would fight the swaps; switch it off. */
+.about-site .about-approach-card:hover .about-approach-circles span:nth-child(n) {
+  transform: none;
+}
 
-  .about-site .about-approach-card:hover .about-approach-circles span:nth-child(2) {
-    transform: translate(3px, 7px) scale(0.88);
-  }
-
-  .about-site .about-approach-card:hover .about-approach-circles span:nth-child(3) {
-    transform: translate(11px, -7px) scale(1.12);
-  }
-
-  .about-site .about-approach-card:hover .about-approach-circles span:nth-child(4) {
-    transform: translate(19px, 7px) scale(0.88);
-  }
-
-  .about-site .about-approach-card:hover .about-approach-circles span.is-solid {
-    background-color: transparent;
-  }
-
-  .about-site .about-approach-card:hover .about-approach-circles span:not(.is-solid) {
-    background-color: currentColor;
-  }
+/* All three boxes share one height (the tallest), side by side or stacked. */
+.about-site .about-approach-grid {
+  align-items: stretch;
+  grid-auto-rows: 1fr;
 }
 
 /* Commitment: heading words rise in, then the eyebrow, copy and CTA follow. */
