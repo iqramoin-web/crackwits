@@ -348,6 +348,13 @@ section.hero {
   height: calc(4 * 1.28em);
 }
 
+/* Desktop (the 21px quote size, above 900px): slightly tighter preview box. */
+@media (width >= 901px) {
+  .testimonial-card-copy--short {
+    height: calc(4 * 1.26em);
+  }
+}
+
 /* ---------- 9. word-by-word text (About page) ---------- */
 
 /*
