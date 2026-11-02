@@ -708,7 +708,7 @@ export function AboutPage() {
                   <img src={LEAD_PORTRAITS[1]} alt="Carla Gurunian" />
                 </div>
                 <h3>CARLA GURUNIAN</h3>
-                <p>Director of Communication</p>
+                <p>General Manager</p>
               </article>
             </div>
           </div>

@@ -12,7 +12,9 @@
  *     commitment entrances;
  * 10. the partner logo marquee;
  * 11. the homepage services' sub-headings and videos;
- * 12. the services page's rows and industries.
+ * 12. the services page's rows and industries;
+ * 13. one hover and label size for every button;
+ * 14. the About commitment image and mobile lead-team alignment.
  */
 
 :root {
@@ -596,8 +598,10 @@ section.hero {
   transition-delay: 0.75s, 0.75s, 0s, 0s;
 }
 
+/* Order matches the button transition in section 13: only the entrance
+   (opacity, transform) waits; hover colours respond at once. */
 .about-site .about-commitment.is-visible .about-commitment-cta {
-  transition-delay: 0.9s, 0.9s, 0s, 0s;
+  transition-delay: 0s, 0s, 0s, 0.9s, 0.9s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -904,6 +908,128 @@ section.hero {
   .services-industries .services-industry-link,
   .services-industries .services-industries-image-stage,
   .services-industries .services-industry-stage-image {
+    animation: none !important;
+  }
+}
+
+/* ---------- 13. buttons ---------- */
+
+/*
+ * Every call-to-action shares the header "Work with us" hover: a soft,
+ * blurred light shape sweeps in from the right (tilted -8°) while the
+ * button frosts over and its text turns dark; and one 13px label size.
+ * Outline buttons on light surfaces use the header's light variant; the
+ * dark Submit button uses its dark-surface variant.
+ */
+.header .header-cta,
+.header .nav-cta,
+.about-site .about-commitment-cta,
+.briefus-submit {
+  font-size: 13px;
+}
+
+.about-site .about-commitment-cta,
+.briefus-submit {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    color 0.35s ease,
+    opacity 0.9s var(--motion-ease),
+    transform 1s var(--motion-ease);
+}
+
+.about-site .about-commitment-cta::before,
+.briefus-submit::before {
+  content: "";
+  position: absolute;
+  inset: -35% -22%;
+  z-index: -1;
+  border-radius: 999px;
+  background: #fff3;
+  filter: blur(2px);
+  pointer-events: none;
+  transform: translate(112%) rotate(-8deg);
+  transition:
+    transform 0.58s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.35s;
+}
+
+.about-site .about-commitment-cta:hover::before,
+.briefus-submit:hover::before {
+  background: #ffffffe6;
+  transform: translate(0) rotate(-8deg);
+}
+
+/* Light surface (as the light header). */
+.about-site .about-commitment-cta:hover {
+  color: #252325;
+  background: #f8f8f8c7;
+  border-color: #25232538;
+}
+
+/* Dark filled button (as the header over dark sections). */
+.briefus-submit:hover {
+  color: #252325;
+  background: #ffffffc7;
+  border-color: #25232538;
+}
+
+/* ---------- 14. about: commitment image, lead team ---------- */
+
+/* The image wipes up into its frame while settling from a slight zoom. */
+@keyframes about-commitment-image-in {
+  from {
+    clip-path: inset(100% 0 0 0 round 14px);
+  }
+  to {
+    clip-path: inset(0 round 14px);
+  }
+}
+
+@keyframes about-commitment-image-settle {
+  from {
+    scale: 1.18;
+  }
+}
+
+.about-site .about-commitment-visual {
+  clip-path: inset(100% 0 0 0 round 14px);
+}
+
+.about-site .about-commitment.is-visible .about-commitment-visual {
+  animation: about-commitment-image-in 1.3s var(--motion-ease) 0.3s both;
+}
+
+.about-site .about-commitment.is-visible .about-commitment-visual img {
+  animation: about-commitment-image-settle 1.8s var(--motion-ease) 0.3s backwards;
+  transition: scale 1.1s var(--motion-ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .about-site .about-commitment-visual:hover img {
+    scale: 1.04;
+  }
+}
+
+/* Mobile: lead names and titles line up with the left edge of the photo. */
+@media (width <= 767px) {
+  .about-site .about-lead-person > h3,
+  .about-site .about-lead-person > p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-site .about-commitment-visual {
+    clip-path: none;
+  }
+
+  .about-site .about-commitment-visual,
+  .about-site .about-commitment-visual img {
     animation: none !important;
   }
 }
