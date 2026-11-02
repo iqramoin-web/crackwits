@@ -31,8 +31,13 @@ const STORY_LINES = [
   "what is expected.",
 ];
 
-const STORY_SUPPORT =
-  "With a mindset rooted in challenging limits and uncovering smarter ways forward, the agency creates work that is designed to perform, scale, and leave a lasting mark.";
+/** Supporting copy; on tablets and laptops it breaks into these four lines. */
+const STORY_SUPPORT_LINES = [
+  "With a mindset rooted in challenging limits",
+  "and uncovering smarter ways forward, the agency",
+  "creates work that is designed to perform,",
+  "scale, and leave a lasting mark.",
+];
 
 /** Count-up length for the statistics, and the gap between each stat starting. */
 const COUNT_MS = 1200;
@@ -443,7 +448,16 @@ export function AboutPage() {
               block per line) must not reach the individual word spans. */}
           <p className="about-story-line">
             <span className="split-fade">
-              <SplitWords text={STORY_SUPPORT} />
+              {STORY_SUPPORT_LINES.map((line, index) => (
+                <Fragment key={index}>
+                  {index > 0 && (
+                    <>
+                      <br className="about-story-support-break" />{" "}
+                    </>
+                  )}
+                  <SplitWords text={line} offset={lineOffsets(STORY_SUPPORT_LINES)[index]} />
+                </Fragment>
+              ))}
             </span>
           </p>
         </div>

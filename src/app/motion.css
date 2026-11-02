@@ -451,6 +451,23 @@ section.hero {
   }
 }
 
+/* Tablets and laptops: exactly four lines, broken where the copy reads best. */
+.about-story-support-break {
+  display: none;
+}
+
+@media (768px <= width <= 1440px) {
+  .about-story-support-break {
+    display: initial;
+  }
+
+  .about-site .about-story .about-story-support > .about-story-line,
+  .about-site .about-story .about-story-support .about-story-line > .split-fade {
+    max-width: none;
+    white-space: nowrap;
+  }
+}
+
 /* Statistics: numbers count up (<CountUp>), then the symbol pops in and the
    label rises; each stat runs --stat-i × 0.12s after the previous one. */
 .about-site .about-statistics.is-visible .about-statistic .about-statistic-suffix {
