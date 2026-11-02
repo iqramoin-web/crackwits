@@ -9,7 +9,9 @@
  *  7. keeping the hero inside small phone screens;
  *  8. the four-line testimonial preview;
  *  9. word-by-word text and the About page's stats, approach and
- *     commitment entrances.
+ *     commitment entrances;
+ * 10. the partner logo marquee;
+ * 11. the homepage services' sub-headings and videos.
  */
 
 :root {
@@ -557,6 +559,103 @@ section.hero {
     transition: none !important;
     transform: none !important;
     opacity: 1 !important;
+  }
+}
+
+/* ---------- 10. partner logos ---------- */
+
+/*
+ * 31 logos instead of the original 11: the marquee durations scale with the
+ * logo count (34s for 11) so the logos still drift past at the same speed.
+ * Desktop shows one row of all logos; mobile splits them over two rows that
+ * run in opposite directions.
+ */
+.partners-carousel > .partners-track--desktop {
+  animation-duration: 96s;
+}
+
+.partners-carousel > .partners-track--mobile {
+  display: none;
+  animation-duration: 49s;
+}
+
+@media (width <= 767px) {
+  .partners-carousel > .partners-track--desktop {
+    display: none;
+  }
+
+  .partners-carousel > .partners-track--mobile {
+    display: flex;
+  }
+}
+
+/* ---------- 11. homepage services ---------- */
+
+/*
+ * The original stylesheet pins the sub-headings' opacity, transform and
+ * transition with !important, so they popped in with no motion. Animations
+ * of the separate `translate` and `clip-path` properties aren't affected:
+ * each sub-heading rises out of a mask, one after another, every time its
+ * service opens (hover / tap) or, on mobile, scrolls into view. The video
+ * wipes up from the bottom while settling from a slight zoom.
+ */
+@keyframes service-detail-in {
+  from {
+    translate: 0 0.9em;
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    translate: 0 0;
+    clip-path: inset(-20% -10% -20% -10%);
+  }
+}
+
+@keyframes service-video-in {
+  from {
+    clip-path: inset(100% 0 0 0);
+    scale: 1.14;
+  }
+  to {
+    clip-path: inset(0);
+    scale: 1;
+  }
+}
+
+.services-section .service-details-inner span:nth-child(1) { --detail-i: 0; }
+.services-section .service-details-inner span:nth-child(2) { --detail-i: 1; }
+.services-section .service-details-inner span:nth-child(3) { --detail-i: 2; }
+.services-section .service-details-inner span:nth-child(4) { --detail-i: 3; }
+
+.services-section .service-row.is-active .service-details-inner span {
+  animation: service-detail-in 0.7s var(--motion-ease) both;
+  animation-delay: calc(0.12s + var(--detail-i, 0) * 0.08s);
+}
+
+.services-section.services-section .service-preview.is-visible video {
+  animation: service-video-in 0.95s var(--motion-ease) 0.12s both;
+}
+
+@media (width <= 767px) {
+  /* Mobile shows every service open; play as each row scrolls in. */
+  .services-section .service-row .service-details-inner span {
+    animation: none;
+  }
+
+  .services-section .service-row.is-mobile-visible .service-details-inner span {
+    animation: service-detail-in 0.75s var(--motion-ease) both;
+    animation-delay: calc(0.3s + var(--detail-i, 0) * 0.09s);
+  }
+
+  .services-section .service-row.is-mobile-visible .service-mobile-image video {
+    animation: service-video-in 1.1s var(--motion-ease) 0.35s both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services-section .service-details-inner span,
+  .services-section .service-preview video,
+  .services-section .service-mobile-image video {
+    animation: none !important;
   }
 }
 

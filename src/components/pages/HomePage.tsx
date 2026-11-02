@@ -51,18 +51,45 @@ const SERVICE_PREVIEW_VIDEOS = [
   "/services/hpservices2.mp4",
 ];
 
+/** [file in /public/partners, brand name] */
 const PARTNER_LOGOS = [
-  "logo-01",
-  "logo-02",
-  "logo-03",
-  "logo-04",
-  "logo-05",
-  "logo-06",
-  "logo-07",
-  "logo-08",
-  "logo-09",
-  "logo-10",
-  "logo-11",
+  ["bei", "Bei"],
+  ["ashas", "Asha’s"],
+  ["kcamp", "KCamp"],
+  ["ventri", "Ventri Group"],
+  ["homey-ways", "Homey Ways"],
+  ["twig", "Twig"],
+  ["illicocash", "illicocash"],
+  ["rawbank", "Rawbank"],
+  ["mylk-maam", "Mylk Ma’am"],
+  ["kidzania", "KidZania"],
+  ["cheesecake-factory", "The Cheesecake Factory"],
+  ["special-events", "Special Events"],
+  ["sunrise-waterpark", "Sunrise Waterpark"],
+  ["buildoser", "Buildöser"],
+  ["tekzone", "Tekzone"],
+  ["pf-changs", "P.F. Chang’s"],
+  ["ovo", "OVO"],
+  ["cubix", "Cubix"],
+  ["dean-deluca", "Dean & DeLuca"],
+  ["altojjar", "Altojjar"],
+  ["quest", "Quest"],
+  ["fondation-rawji", "Fondation Rawji"],
+  ["pointe-anglaise", "Pointe Anglaise"],
+  ["pizza-express", "Pizza Express"],
+  ["coya", "COYA"],
+  ["chanca", "Chanca by COYA"],
+  ["edo", "EDO"],
+  ["lillajar", "Lillajar"],
+  ["trs-polymers", "TRS Polymers"],
+  ["britam-arabia", "Britam Arabia"],
+  ["965smile", "965 Smile"],
+] as const;
+
+/** On mobile the logos are split across two rows running in opposite directions. */
+const PARTNER_ROWS_MOBILE = [
+  PARTNER_LOGOS.slice(0, Math.ceil(PARTNER_LOGOS.length / 2)),
+  PARTNER_LOGOS.slice(Math.ceil(PARTNER_LOGOS.length / 2)),
 ];
 
 const TESTIMONIALS = [
@@ -868,24 +895,30 @@ export function HomePage() {
           <h2 id="partners-title">Forwarding Ambitious Brands</h2>
         </div>
         <div className="partners-carousel" aria-label="Our partners">
-          <div className="partners-track">
+          <div className="partners-track partners-track--desktop">
             {[0, 1].map((copy) =>
-              PARTNER_LOGOS.map((logo) => (
+              PARTNER_LOGOS.map(([logo, name]) => (
                 <div key={`${copy}-${logo}`} className="partner-logo">
-                  <img src={`/partners/${logo}.png`} alt="" />
+                  <img src={`/partners/${logo}.png`} alt={copy === 0 ? name : ""} />
                 </div>
               )),
             )}
           </div>
-          <div className="partners-track partners-track--mobile-second" aria-hidden="true">
-            {[0, 1].map((copy) =>
-              PARTNER_LOGOS.map((logo) => (
-                <div key={`mobile-${copy}-${logo}`} className="partner-logo">
-                  <img src={`/partners/${logo}.png`} alt="" />
-                </div>
-              )),
-            )}
-          </div>
+          {PARTNER_ROWS_MOBILE.map((row, rowIndex) => (
+            <div
+              key={rowIndex}
+              className={`partners-track partners-track--mobile${rowIndex === 1 ? " partners-track--mobile-second" : ""}`}
+              aria-hidden="true"
+            >
+              {[0, 1].map((copy) =>
+                row.map(([logo]) => (
+                  <div key={`mobile-${copy}-${logo}`} className="partner-logo">
+                    <img src={`/partners/${logo}.png`} alt="" />
+                  </div>
+                )),
+              )}
+            </div>
+          ))}
         </div>
       </section>
       <section
