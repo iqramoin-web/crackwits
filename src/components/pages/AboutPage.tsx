@@ -5,6 +5,7 @@ import { Fragment, useEffect, useRef, useState, type CSSProperties, type Pointer
 import { SiteFooter } from "@/components/SiteFooter";
 import { MenuOverlay } from "@/components/SiteHeader";
 import { SplitWords, wordCount } from "@/components/SplitWords";
+import { onThemeLine } from "@/lib/themeLine";
 import { useMenuBodyClass } from "@/lib/useInView";
 
 const CAROUSEL_IMAGES = [
@@ -209,30 +210,20 @@ export function AboutPage() {
     return () => observer.disconnect();
   }, []);
 
-  // Dark → light transition once the carousel reaches 70% of the viewport (reverts below 82%).
-  useEffect(() => {
-    const update = () => {
-      const carousel = carouselRef.current;
-      if (!carousel) return;
-      const top = carousel.getBoundingClientRect().top;
-      const enterAt = window.innerHeight * 0.7;
-      const exitAt = window.innerHeight * 0.82;
-      if (!isTransitionedRef.current && top <= enterAt) {
-        isTransitionedRef.current = true;
-        setLightTransitioned(true);
-      } else if (isTransitionedRef.current && top > exitAt) {
-        isTransitionedRef.current = false;
-        setLightTransitioned(false);
-      }
-    };
-    update();
-    window.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
-    return () => {
-      window.removeEventListener("scroll", update);
-      window.removeEventListener("resize", update);
-    };
-  }, []);
+  // Dark -> light hand-off as the carousel's top passes 60% of the viewport,
+  // the same line both ways, matching the homepage (colours cross-fade only).
+  useEffect(
+    () =>
+      onThemeLine(
+        () => carouselRef.current,
+        (light) => {
+          if (light === isTransitionedRef.current) return;
+          isTransitionedRef.current = light;
+          setLightTransitioned(light);
+        },
+      ),
+    [],
+  );
 
   // Commitment: the heading rises in word by word, then the copy and CTA follow.
   useEffect(() => {

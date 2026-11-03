@@ -6,6 +6,7 @@ import { useEffect, useRef, useState, type CSSProperties, type MouseEvent as Rea
 import { SiteFooter } from "@/components/SiteFooter";
 import { SplitWords } from "@/components/SplitWords";
 import { isEntryPageView } from "@/lib/siteSession";
+import { onThemeLine } from "@/lib/themeLine";
 import { navigateWithViewTransition } from "@/lib/viewTransitionNav";
 
 const GREETINGS = ["Hello", "مرحباً", "Bonjour", "Hola", "Ciao", "Hallo", "Olá", "你好", "こんにちは", "হ্যালো"];
@@ -375,70 +376,46 @@ export function HomePage() {
   useEffect(() => {
     const el = selectedWorkRef.current;
     if (!el) return;
-    const observer = new IntersectionObserver(([entry]) => setSelectedWorkVisible(entry.isIntersecting), {
-      rootMargin: "0px 0px -15% 0px",
-      threshold: 0,
-    });
+    // One-shot: the entrance plays once; scrolling back only changes colours.
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        setSelectedWorkVisible(true);
+        observer.disconnect();
+      },
+      { rootMargin: "0px 0px -15% 0px", threshold: 0 },
+    );
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
-  // Dark -> light background transition between "since" and "selected work".
-  useEffect(() => {
-    const desktop = isDesktop();
-    const mobile = isMobile();
-    if (!desktop && !mobile) return;
-
-    if (mobile) {
-      const onScroll = () => {
-        const section = selectedWorkRef.current;
-        if (!section) return;
-        const titleTop =
-          section.querySelector("#selected-work-title")?.getBoundingClientRect().top ??
-          section.getBoundingClientRect().top;
-        const sectionTop = section.getBoundingClientRect().top;
-        const enterLine = window.innerHeight * 0.84;
-        const exitLine = window.innerHeight * 0.18;
-        if (titleTop <= enterLine && !transitionedRef.current) {
-          transitionedRef.current = true;
-          setTransitioned(true);
-        } else if (sectionTop > exitLine && transitionedRef.current) {
-          transitionedRef.current = false;
-          setTransitioned(false);
-        }
-      };
-      onScroll();
-      window.addEventListener("scroll", onScroll, { passive: true });
-      window.addEventListener("resize", onScroll);
-      return () => {
-        window.removeEventListener("scroll", onScroll);
-        window.removeEventListener("resize", onScroll);
-      };
-    }
-
-    const onWheel = (event: WheelEvent) => {
-      const section = selectedWorkRef.current;
-      if (!section || Math.abs(event.deltaY) < 8) return;
-      const top = section.getBoundingClientRect().top;
-      const enterLine = window.innerHeight * 0.58;
-      if (event.deltaY > 0 && top <= enterLine && top > -window.innerHeight * 0.35 && !transitionedRef.current) {
-        transitionedRef.current = true;
-        setTransitioned(true);
-      } else if (event.deltaY < 0 && top > window.innerHeight * 0.24 && transitionedRef.current) {
-        transitionedRef.current = false;
-        setTransitioned(false);
-      }
-    };
-    window.addEventListener("wheel", onWheel, { passive: true });
-    return () => window.removeEventListener("wheel", onWheel);
-  }, []);
+  // Dark -> light hand-off between "since" and "selected work": the colours
+  // switch (and cross-fade, see motion.css) when Selected Work's top passes
+  // 60% of the viewport, the same line scrolling down or up, by any input.
+  useEffect(
+    () =>
+      onThemeLine(
+        () => selectedWorkRef.current,
+        (light) => {
+          if (light === transitionedRef.current) return;
+          transitionedRef.current = light;
+          setTransitioned(light);
+        },
+      ),
+    [],
+  );
 
   useEffect(() => {
     const section = selectedWorkRef.current;
     if (!section) return;
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => entry.target.classList.toggle("is-inview", entry.isIntersecting));
+        // One-shot, like the section entrance: nothing replays on the way back.
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-inview");
+          observer.unobserve(entry.target);
+        });
       },
       { threshold: 0.18 },
     );
