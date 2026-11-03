@@ -80,6 +80,35 @@
   text-wrap: pretty;
 }
 
+/*
+ * Bigger screens: above 1440px the section used to stop growing (46px title,
+ * 23px copy, 940 / 700px measures, 665px tall), leaving a small block in a
+ * lot of space. It now keeps the 1440px proportions, everything scaling with
+ * the viewport width, so the line breaks stay the same.
+ */
+@media (width > 1440px) {
+  main .since-section {
+    min-height: 46.2vw;
+    padding: 6.4vw 4.3vw 7.6vw;
+  }
+
+  .since-intro-eyebrow {
+    font-size: 1.46vw;
+  }
+
+  .since-intro-title {
+    max-width: 65.3vw;
+    margin-top: 3.54vw;
+    font-size: 3.1vw;
+  }
+
+  .since-intro-copy {
+    max-width: 48.6vw;
+    margin-top: 3.47vw;
+    font-size: 1.58vw;
+  }
+}
+
 /* Title: each word rises out of its own mask. */
 .since-intro-title .word {
   display: inline-block;
