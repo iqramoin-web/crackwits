@@ -608,3 +608,45 @@
   line-height: 1.2;
   box-shadow: 0 6px 24px #2523252e;
 }
+
+/* ---------- hero banner ---------- */
+
+/*
+ * The banner image was capped at 1304px inside a 1442px column with 62px
+ * side padding, so it stopped growing on wide screens and left large empty
+ * margins. It now spans the screen with a small gutter at every width; the
+ * title and subtitle keep lining up with the header logo (62px / 20px / 18px).
+ */
+.cs-case-hero {
+  --cs-hero-gutter: 24px;
+  --cs-hero-text-inset: calc(62px - var(--cs-hero-gutter));
+  padding-inline: var(--cs-hero-gutter);
+}
+
+.cs-case-hero .cs-case-inner {
+  width: 100%;
+}
+
+.cs-case-hero h1,
+.cs-case-hero .cs-case-subtitle {
+  padding-inline-start: var(--cs-hero-text-inset);
+}
+
+body:has(.cs-case-study) .cs-case-hero .cs-case-image {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+}
+
+@media (width <= 900px) {
+  .cs-case-hero {
+    --cs-hero-gutter: 20px;
+    --cs-hero-text-inset: 0px;
+  }
+}
+
+@media (width <= 580px) {
+  .cs-case-hero {
+    --cs-hero-gutter: 18px;
+  }
+}
