@@ -5,22 +5,22 @@ const homeyWays: CaseStudy = {
   name: "HOMEY WAYS",
   category: "HOME SERVICES",
   thumbnail: "/work/homey-ways.webp",
-  subtitle: "A spotless home, booked in a few friendly taps.",
+  subtitle: "Naming, building and launching a spotless home-services platform.",
   cover: {
     src: "/case-studies/homey-ways/cover.webp",
     alt: "HOMEY WAYS campaign hero — a freshly cleaned, sunlit living room",
     ai: true,
   },
   overview: [
-    "HOMEY WAYS is a home-services platform that lets households book cleaning and specialised care for their homes on demand.",
-    "Inviting someone into your home requires trust. The service needed a booking experience that felt personal and effortless, and a brand warm enough to sit comfortably in people’s private spaces.",
-    "CRACKWITS designed the app experience and a cheerful visual language around it — clear service categories, a bespoke illustration system and communication that celebrates the feeling of coming home to a clean space.",
+    "HOMEY WAYS is a tech-led services marketplace for residential and corporate properties in the UAE, where customers book appointments, track progress and pay online in one friendly platform.",
+    "Its promise is trusted, well-trained agents and consistent, customisable on-demand services, delivered with care and transparency at appealing rates. To stand out against established players, it needed a name, a brand and a digital experience as reliable as the service itself.",
+    "CRACKWITS built HOMEY WAYS from the ground up: the name and logo, the strategy and big idea, the website, web app and mobile app, the standard operating procedures and code of conduct for agents, and the corporate profile and investor deck.",
   ],
-  services: ["Brand Identity", "UX/UI", "App Development", "Social Media", "Content Production"],
+  services: ["Strategy", "Naming & Branding", "UX/UI", "Web Development", "App Development", "Social Media"],
   stats: [
     { value: null, label: "App Downloads" },
     { value: null, label: "Monthly Bookings" },
-    { value: null, label: "Repeat Booking Rate" },
+    { value: null, label: "Services Offered" },
   ],
   brandBoard: {
     kind: "tokens",
@@ -34,18 +34,18 @@ const homeyWays: CaseStudy = {
         { name: "Leaf", hex: "#3DAA52" },
         { name: "Lilac", hex: "#A98BEB" },
       ],
-      line: "Impeccable, every time.",
+      line: "If not impeccable, consider it complimentary.",
       pattern: "stripes",
-      voice: ["Friendly", "Tidy", "Trustworthy", "Bright"],
+      voice: ["Reliable", "Friendly", "Transparent", "Witty"],
     },
     images: ["/case-studies/homey-ways/duo.webp", "/case-studies/homey-ways/lead.webp"],
   },
   sections: [
     {
       layout: "lead",
-      title: ["A Personal Greeting", "Before Every Booking"],
+      title: ["A Witty Name", "With Tiny but Mighty Icons"],
       body: [
-        "The app opens by name — “Hello Leila! What can we help you with?” — turning a service menu into a conversation. Below, each category from general cleaning to specialised services gets its own illustrated tile in a distinct colour, so the right option is recognisable at a glance, while a rotating banner sets the promise: impeccable, neat and spotless, every time.",
+        "Market research produced a shortlist of names, and HOMEY WAYS won by turning the core business into something witty yet distinctive. The identity sets the name in a stylised wordmark with fresh, bright colours and room for a tailor-made brand mark, while a family of small icons gives every service its own recognisable tile — seen here on the app’s friendly home screen.",
       ],
       media: [
         { kind: "image", src: "/work/homey-ways.webp", alt: "HOMEY WAYS app home screen with illustrated service categories" },
@@ -59,10 +59,10 @@ const homeyWays: CaseStudy = {
     },
     {
       layout: "feature",
-      title: ["Turning Household Chores", "Into a Simple Choice"],
+      title: ["Book, Track and Pay", "in a Few Taps"],
       body: [
-        "Most people know what they need — a deep clean, a move-out, help with a specific room — but not how to ask for it. The website translates that into a short sequence: pick a service, choose a time, confirm.",
-        "Service pages reuse the app’s illustrated categories and colour coding, so every route online leads to the same familiar booking flow and a single, clear call to action.",
+        "The website and web app act as a central hub: an informative, e-commerce platform where customers browse cleaning services and book an agent through a detailed, customisable booking flow.",
+        "The mobile app takes the same journey end to end — browse, book, track progress and pay — with in-app customer care, saved service preferences and the ability to review and rate agents, making it a pocket-sized clean companion.",
       ],
       media: [
         {
@@ -70,7 +70,7 @@ const homeyWays: CaseStudy = {
           src: "/case-studies/homey-ways/cover.webp",
           url: "homeyways.com",
           nav: ["Services", "How It Works", "Pricing", "Contact"],
-          headline: "Come home to spotless.",
+          headline: "If not impeccable, consider it complimentary.",
           cta: "Book a Clean",
           alt: "HOMEY WAYS website mockup with sunlit living room hero",
           ai: true,
@@ -79,29 +79,33 @@ const homeyWays: CaseStudy = {
     },
     {
       layout: "duo",
-      title: ["Selling the Feeling", "of a Fresh Home"],
+      title: ["A Launch Strategy", "That Stands Out"],
       body: [
-        "Rather than showing mops and buckets, communication focuses on the result: the first coffee in a calm, tidy kitchen, crisp linen, a living room ready for guests. The service is the enabler; the feeling is the story.",
-        "Bright primary accents from the illustration system punctuate soft, airy photography, giving the feed a cheerful, ordered rhythm that echoes the brand’s promise of care and precision.",
+        "Research into target audiences, the UAE digital services market and current trends shaped a launch strategy that reinforces the brand’s USPs — the 4Os and big idea gave every message a clear direction against established competitors.",
+        "Supporting collateral and brand assets were designed to double as organic advertising, carrying the fresh colours and a confident promise: if the job isn’t impeccable, it’s on the house.",
       ],
       media: [
         {
           kind: "phone",
           src: "/case-studies/homey-ways/duo.webp",
           handle: "@homeyways",
-          caption: "Fresh sheets. Clear mind. Leave the rest to us.",
+          caption: "Fresh sheets, clear mind. If it’s not impeccable, it’s complimentary.",
           alt: "HOMEY WAYS social post showing a woman relaxing on a freshly made bed",
           ai: true,
         },
-        { kind: "poster", line: "Impeccable, every time.", alt: "HOMEY WAYS brand poster in navy, blue and sunshine yellow" },
+        {
+          kind: "poster",
+          line: "If not impeccable, consider it complimentary.",
+          alt: "HOMEY WAYS brand poster in navy, blue and sunshine yellow",
+        },
       ],
     },
     {
       layout: "feature",
-      title: ["A Uniform of Trust", "at Every Doorstep"],
+      title: ["Setting the Gold Standard", "Behind Every Visit"],
       body: [
-        "The service is delivered in person, so the brand has to arrive with the team. Uniforms, supply kits and vehicles carry the navy-and-blue identity with bright accent colours drawn from the app.",
-        "Seeing the same colours on the doorstep as on the booking screen gives customers immediate reassurance that the right people have arrived — and makes every visit a consistent brand moment.",
+        "A service is only as good as the people who deliver it. CRACKWITS wrote detailed, visual standard operating procedures and a code of conduct aligned with high international standards, so every agent knows the care, precision and efficiency expected in each home.",
+        "For the business side, a corporate profile and a concise investor deck summarise the brand’s keys to success, competitive advantage, operating model and financial projections.",
       ],
       media: [
         {
@@ -114,18 +118,15 @@ const homeyWays: CaseStudy = {
     },
   ],
   outcome:
-    "HOMEY WAYS now has a booking experience and brand that make home care feel personal, organised and trustworthy — from the first greeting in the app to the team at the door — with an illustration-led system that can expand as new services are added.",
+    "HOMEY WAYS launched with everything a new service brand needs — a name, an identity, a booking platform across web and app, clear standards for its agents and a story ready for investors — all held together by one confident promise of impeccable care.",
   more: ["965smile", "burj-al-tojjar"],
   draft: true,
   review: [
-    "Assumed CRACKWITS delivered the app UX/UI and illustration system (thumbnail shows the app home screen) — confirm scope, including app development and brand identity.",
-    "Market not stated; assumed a Gulf market (Kuwait/UAE) — no location claims made in copy. Confirm.",
-    "Website section assumed — no website evidence in the thumbnail. Domain 'homeyways.com' and nav items are placeholders.",
-    "Section 4 (uniforms, supply kits, vehicles) is assumed — confirm or replace.",
-    "Service categories referenced only as 'general cleaning' and 'specialised services' (visible in thumbnail); others are implied — confirm full list.",
-    "Palette sampled from the logo and illustrations (navy, blue, yellow, green, lilac); hex values approximate. Typeface 'Bricolage Grotesque' is a stand-in — confirm.",
-    "Brand line 'Impeccable, every time.' adapted from the app banner 'Impeccable, neat and spotless… every time!'. Web headline is invented.",
-    "Social handle '@homeyways' assumed.",
+    "From crackwits.com case study: services marketplace for residential and corporate properties; book, track and pay online; trusted agents, transparency, appealing rates; UAE market; punchline 'If not impeccable, consider it complimentary.'.",
+    "From crackwits.com case study: brand name, logo and identity, icons; strategy (4Os, big idea, market research); website and web app; mobile app with customer care, preferences, agent reviews; SOP and code of conduct; corporate profile and investor deck.",
+    "Domain 'homeyways.com' is a placeholder — the reference shows a stray 'sunrisewaterpark.com' link. Nav items are assumed.",
+    "Social media appears in the reference’s service tags but is not described; social post, handle '@homeyways' and caption are illustrative.",
+    "Palette sampled from the logo and illustrations; typeface 'Bricolage Grotesque' is a stand-in.",
   ],
 };
 

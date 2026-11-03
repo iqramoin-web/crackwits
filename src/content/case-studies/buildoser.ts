@@ -5,27 +5,27 @@ const buildoser: CaseStudy = {
   name: "BUILDOSER",
   category: "REAL ESTATE",
   thumbnail: "/work/buildoser.webp",
-  subtitle: "A quiet, architectural identity drawn from the lines of a blueprint.",
+  subtitle: "Relaunching a Kuwaiti contractor with an identity built to last.",
   cover: {
     src: "/case-studies/buildoser/cover.webp",
     alt: "Contemporary concrete building with sand-toned details in soft daylight",
     ai: true,
   },
   overview: [
-    "BUILDOSER works across the built environment, taking projects from early design through to construction and handover.",
-    "In a sector where many brands lean on hard hats and heavy machinery, BUILDOSER wanted to be seen as a considered partner: closer to an architecture studio than a site contractor, and credible with developers, investors and private clients.",
-    "CRACKWITS developed a restrained identity built on the construction line: a light lowercase wordmark, a sand-and-graphite palette and a linear pattern taken from setting-out drawings, applied across stationery, documents and site communication.",
+    "BUILDOSER is a contracting and trading corporation in Kuwait, standing on 15 years of contracting, fit-out and interior design work. Its projects range from residential extensions, loft conversions and renovations to commercial landscaping and shop fitting, all delivered with care, rigour and efficiency.",
+    "Relaunching as BUILDÖSER, the company needed its existing branding refreshed into an identity that matched the quality of its work, a portfolio that brought its projects together in one place, and a first presence online.",
+    "CRACKWITS revamped the brand from logo to stationery, presenting several variations for the team to choose from, compiled a detailed portfolio of past projects, and designed and developed an under-construction page to hold the web address until the full site was ready.",
   ],
-  services: ["Brand Position", "Brand Identity", "Creative Direction", "Content Production"],
+  services: ["Strategy", "Brand Identity", "UX/UI", "Portfolio Design"],
   stats: [
-    { value: null, label: "Brand Touchpoints Delivered" },
-    { value: null, label: "Projects Branded On Site" },
-    { value: null, label: "New Business Enquiries" },
+    { value: null, label: "Brand Assets Revamped" },
+    { value: null, label: "Projects in the Portfolio" },
+    { value: null, label: "Identity Variations Presented" },
   ],
   brandBoard: {
     kind: "tokens",
     tokens: {
-      wordmark: "buildoser",
+      wordmark: "buildöser",
       typeface: "Outfit",
       palette: [
         { name: "Graphite", hex: "#3A3B3D" },
@@ -34,18 +34,18 @@ const buildoser: CaseStudy = {
         { name: "Plaster", hex: "#E4E4E2" },
         { name: "Drafting White", hex: "#F6F6F4" },
       ],
-      line: "Every line has a purpose.",
+      line: "Fifteen years of building, made new.",
       pattern: "diagonal",
-      voice: ["Considered", "Precise", "Calm", "Assured"],
+      voice: ["Meticulous", "Thorough", "Efficient", "Dependable"],
     },
     images: ["/case-studies/buildoser/duo.webp", "/case-studies/buildoser/lead.webp"],
   },
   sections: [
     {
       layout: "lead",
-      title: ["Building an Identity", "From the Drawing Board Up"],
+      title: ["Refreshing an Identity", "Fifteen Years in the Making"],
       body: [
-        "Every building starts as a set of lines on paper, and the identity starts there too. Fine intersecting construction lines, the kind used to set out a plan, form the brand's signature pattern. A light lowercase wordmark and a single band of warm sandstone give the system a calm, crafted quality that feels closer to design than to heavy industry.",
+        "BUILDOSER already had a brand, but it no longer reflected the standard of the company behind it. We revisited every element — logo, colours, typefaces and graphic language — and presented the client with several variations before settling on a fresher, more precise system. The result keeps the credibility of a decade and a half on site while giving the relaunch a clean, contemporary start.",
       ],
       media: [
         { kind: "image", src: "/work/buildoser.webp", alt: "BUILDOSER branded notebook with construction-line pattern" },
@@ -59,10 +59,10 @@ const buildoser: CaseStudy = {
     },
     {
       layout: "feature",
-      title: ["Letting Architecture", "Carry the Brand Story"],
+      title: ["A Portfolio That Lets", "the Finished Work Speak"],
       body: [
-        "The art direction favours finished space over construction chaos: clean concrete, natural light, honest materials and room to breathe. Photography is framed around proportion and detail so that the work, not the machinery, signals capability.",
-        "Sandstone is used sparingly as a highlight, echoing the warm stone and timber finishes BUILDOSER brings to its projects, while graphite and plaster tones keep the palette grounded.",
+        "Fifteen years of projects are the company’s strongest argument, so we gathered them into one carefully structured portfolio. Residential extensions, loft conversions, renovations, landscaping and shop fit-outs each sit within a consistent layout that makes the breadth of BUILDOSER’s work easy to take in.",
+        "Clean photography and generous space let each project show its detail, giving prospective clients a clear picture of what the team delivers.",
       ],
       media: [
         {
@@ -75,29 +75,29 @@ const buildoser: CaseStudy = {
     },
     {
       layout: "duo",
-      title: ["Speaking to Clients", "With the Confidence of a Studio"],
+      title: ["Holding the Address", "While the Site Takes Shape"],
       body: [
-        "Communication follows the same restraint as the identity. Project stories focus on process, materials and the people who make decisions on site, written in a measured voice that builds trust with developers and private clients alike.",
-        "Social and presentation templates reuse the construction-line grid, so a progress update, a tender document and a finished-project feature all share one visual rhythm.",
+        "A new brand needs somewhere to point people from day one. We designed and developed an under-construction page that introduces the relaunched identity and keeps the company reachable while the full website is in progress.",
+        "The revamped graphic elements were built to work on screen as well as in print, so the brand carries the same clarity wherever it appears next.",
       ],
       media: [
         {
           kind: "phone",
           src: "/case-studies/buildoser/duo.webp",
           handle: "@buildoser",
-          caption: "From first line to final finish.",
-          alt: "Architect reviewing drawings on a bright construction site",
+          caption: "Built on 15 years of contracting, fit-out and interiors. Something new is on the way.",
+          alt: "Site engineer holding drawings on a bright construction site",
           ai: true,
         },
-        { kind: "poster", line: "Every line has a purpose.", alt: "BUILDOSER brand poster" },
+        { kind: "poster", line: "Fifteen years of building, made new.", alt: "BUILDOSER brand poster" },
       ],
     },
     {
       layout: "feature",
-      title: ["A System That Holds Up", "From Notebook to Hoarding"],
+      title: ["Stationery and Collaterals", "Built for Daily Use"],
       body: [
-        "Notebooks, letterheads, business cards and proposal folders bring the identity into meetings, while site hoardings and safety signage carry it into public view. The same proportions and line pattern scale from a pocket notebook to a full-length site fence.",
-        "Clear rules for colour, line weight and wordmark placement let BUILDOSER brand each new site and document consistently, without starting from scratch.",
+        "The relaunch came to life in everyday materials: stationery, collaterals and supporting graphics designed to be used in meetings, proposals and on site.",
+        "Consistent use of the refreshed logo, colours and typefaces means every document BUILDOSER sends out reflects the same precision the team brings to its projects.",
       ],
       media: [
         {
@@ -110,17 +110,17 @@ const buildoser: CaseStudy = {
     },
   ],
   outcome:
-    "BUILDOSER now presents itself with the clarity and care it brings to every project. The identity gives the company a calm, recognisable presence from the first proposal to the finished building, and a flexible system that can expand with every new development it takes on.",
+    "BUILDOSER relaunches with an identity that finally matches the standard of its work, a portfolio that brings 15 years of projects together, and an online placeholder that keeps the new brand visible from the start — a solid base for its next phase of growth.",
   more: ["burj-al-tojjar", "cubix"],
   draft: true,
   review: [
-    "Section image experience.webp is an additional AI placeholder (generated so the cover is not repeated) — replace with real imagery.",
-    "The thumbnail shows only a branded notebook; assumed CRACKWITS delivered positioning, identity, stationery, site hoardings, signage and social/presentation templates. Confirm scope.",
-    "Assumed BUILDOSER is a construction/development company (design through to handover) based on the name and REAL ESTATE category. Confirm exact business and services.",
-    "Wordmark appears lowercase ('buildoser', possibly with a diaeresis on the 'o') with a small descriptor line that is not legible. Confirm exact wordmark spelling and descriptor.",
-    "Handle @buildoser is assumed. Market/location not stated; copy kept location-neutral.",
-    "Palette sampled from the notebook (white, light grey, sand/beige, graphite); hex values approximate. Outfit chosen to approximate the light geometric lowercase wordmark.",
-    "The construction-line pattern rationale (setting-out drawings) is an interpretation of the notebook graphic. Brand line 'Every line has a purpose' is new copy.",
+    "From crackwits.com case study: contracting and trading corporation in Kuwait; 15 years of contracting, fit-out and interior design; residential extensions, loft conversions, renovations, commercial landscaping, shop fitting.",
+    "From crackwits.com case study: scope was a brand revamp/relaunch (logo, colours, fonts, collaterals, stationery, graphic elements, several variations), a project portfolio and an under-construction web page. Site hoardings, signage and social templates removed.",
+    "Reference spells the relaunched name 'BUILDÖSER'; board wordmark set to 'buildöser' — confirm exact spelling and casing.",
+    "Brand line 'Fifteen years of building, made new.' is new copy based on the punchline about 15 years of contracting.",
+    "Handle '@buildoser' and the phone caption are invented; social media is not in the reference scope — the phone mockup is illustrative.",
+    "Palette sampled from the notebook thumbnail; hex values approximate. Outfit chosen to approximate the wordmark.",
+    "All AI images are illustrative placeholders.",
   ],
 };
 

@@ -5,22 +5,22 @@ const kcamp: CaseStudy = {
   name: "KCAMP",
   category: "ENTERTAINMENT",
   thumbnail: "/work/kcamp.webp",
-  subtitle: "Bringing a long-running Kuwait summer camp online, with its energy intact.",
+  subtitle: "Refreshing a much-loved Kuwait children’s camp for the seasons ahead.",
   cover: {
     src: "/case-studies/kcamp/cover.webp",
     alt: "Children in orange camp t-shirts running across a sunny courtyard",
     ai: true,
   },
   overview: [
-    "K-Camp, Kuwait Camp, has been part of children’s summers in Kuwait for a generation, marking 25 years of activities, programmes and friendships.",
-    "Parents now research, compare and register online, often on their phones and often at the last minute. The camp needed a digital presence that matched the warmth families already knew, while making age groups, programmes and registration straightforward to navigate.",
-    "CRACKWITS designed and built a new website for K-Camp, organised around the questions parents ask, led by real camp photography and anchored by a registration path that stays one tap away throughout the experience.",
+    "For more than two decades, KCamp has been a fun, friendly seasonal camp in Kuwait for children aged 3 to 15 — a place to get outdoors, try new things, make friends and belong to a community.",
+    "Its programme is built around three kinds of activity, Move, Play and Create, run by trained counsellors in a safe environment that encourages teamwork, independence, leadership and social skills. As the camp kept growing and reaching new milestones, it needed a brand, strategy and digital presence that could keep pace.",
+    "CRACKWITS revamped the brand, set a strategy for each new season, designed and built a website with online registration, and took over social media — from content and boosting to on-ground coverage during camp.",
   ],
-  services: ["UX/UI", "Web Development", "Content Production", "Social Media"],
+  services: ["Brand Revamp", "Strategy", "UX/UI", "Web Development", "Social Media"],
   stats: [
     { value: null, label: "Online Registrations" },
-    { value: null, label: "Returning Families" },
-    { value: null, label: "Mobile Traffic Share" },
+    { value: null, label: "Returning Campers" },
+    { value: null, label: "Seasonal Social Reach" },
   ],
   brandBoard: {
     kind: "tokens",
@@ -34,21 +34,21 @@ const kcamp: CaseStudy = {
         { name: "Leaf Green", hex: "#6CBF4B" },
         { name: "Lavender", hex: "#8C7BD6" },
       ],
-      line: "25 summers of good times.",
+      line: "Move. Play. Create.",
       pattern: "dots",
-      voice: ["Warm", "Energetic", "Trusted", "Fun"],
+      voice: ["Funky", "Vibrant", "Positive", "Welcoming"],
     },
     images: ["/case-studies/kcamp/duo.webp", "/case-studies/kcamp/lead.webp"],
   },
   sections: [
     {
       layout: "lead",
-      title: ["Leading With Faces", "Instead of Features"],
+      title: ["A Funkier Brand", "That Still Feels Familiar"],
       body: [
-        "For a summer camp, the strongest argument is the children themselves. The homepage opens on a full-bleed group photo in the camp’s signature orange, with the name set large and simple — Kuwait Camp — so parents feel the atmosphere before reading a single line about programmes.",
+        "KCamp needed a more unified identity that reflects its values and can grow a little every season. CRACKWITS revamped the logo, iconography, banners, stationery, collateral and advertising templates with a bold, playful energy — vibrant enough to excite children, yet familiar and welcoming to returning campers, parents, counsellors and future partners alike.",
       ],
       media: [
-        { kind: "image", src: "/work/kcamp.webp", alt: "K-Camp website shown on a laptop" },
+        { kind: "image", src: "/work/kcamp.webp", alt: "KCamp website shown on a laptop" },
         {
           kind: "image",
           src: "/case-studies/kcamp/lead.webp",
@@ -59,10 +59,10 @@ const kcamp: CaseStudy = {
     },
     {
       layout: "feature",
-      title: ["Making Registration", "The Easiest Step"],
+      title: ["A Website Parents", "Can Sign Up From"],
       body: [
-        "Navigation follows a parent’s decision process: about the camp, age groups, the KIT programme, activities, team and gallery. Each page answers one question clearly and points back to the same place.",
-        "A persistent Register Now button, set in the brand’s lavender, sits in the header across every page and screen size, turning interest into sign-ups without making families hunt for the form.",
+        "The website is KCamp’s online hub: it builds awareness, introduces new activities, shares photos from each season and handles registrations.",
+        "Its light-hearted, straightforward design puts the camp’s values, campers, team and activities up front, with a Register Now button that stays within reach on every page so parents can sign up the moment they decide.",
       ],
       media: [
         {
@@ -72,36 +72,36 @@ const kcamp: CaseStudy = {
           nav: ["Age Groups", "Programs", "Activities", "Gallery"],
           headline: "Kuwait Camp",
           cta: "Register Now",
-          alt: "K-Camp website hero with children running outdoors",
+          alt: "KCamp website hero with children running outdoors",
           ai: true,
         },
       ],
     },
     {
       layout: "duo",
-      title: ["Sharing the Summer", "One Day at a Time"],
+      title: ["Covering Camp Life", "as It Happens"],
       body: [
-        "Parents want to see what their children are doing; children want to see themselves. Daily content captures small wins — a finished project, a painted face, a team cheer — and turns them into posts families look forward to.",
-        "A consistent multicolour palette and loose, hand-drawn energy keep the feed playful while remaining recognisably K-Camp.",
+        "CRACKWITS gave the feed a harmonious look and created content that shows off KCamp’s friendly community and builds excitement for each new season. The team managed seasonal content calendars, daily posting and boosting of camp, occasion and advertising posts.",
+        "During camp, daily coverage captured stories of activities, campers and sponsors, backed by prompt support online and on the ground and supervision of regular photo and video shoots.",
       ],
       media: [
         {
           kind: "phone",
           src: "/case-studies/kcamp/duo.webp",
           handle: "@kcampkw",
-          caption: "Built it, painted it, launching it tomorrow.",
+          caption: "Today’s Create session: rockets ready for launch.",
           alt: "Boy in an orange t-shirt holding up a handmade paper rocket",
           ai: true,
         },
-        { kind: "poster", line: "25 summers of good times.", alt: "K-Camp brand poster" },
+        { kind: "poster", line: "Move. Play. Create.", alt: "KCamp brand poster" },
       ],
     },
     {
       layout: "feature",
-      title: ["Celebrating 25 Years", "Without Growing Up"],
+      title: ["A Season Launch", "Across Every Channel"],
       body: [
-        "The 25-year milestone was integrated into the wordmark lock-up, adding a sense of heritage and trust without losing the camp’s playful character.",
-        "The same palette of coral, orange, sky blue, green and lavender carries through to camp kits and merchandise, so the brand children wear every day matches the one their parents discovered online.",
+        "Behind the creative sits a strategy to grow awareness, strengthen KCamp’s position in Kuwait, attract new campers and keep existing families coming back — speaking to both individual and corporate audiences across a wide age range.",
+        "Each new season is launched with one consistent style online and offline, carried from campaign posts through to the kits, merchandise and collateral children and parents see at camp.",
       ],
       media: [
         {
@@ -114,16 +114,16 @@ const kcamp: CaseStudy = {
     },
   ],
   outcome:
-    "K-Camp now has a digital home as welcoming as the camp itself — one that lets parents understand the offer quickly, register with confidence and stay connected to their children’s summer, while honouring 25 years of history.",
+    "KCamp now has a brand, strategy and digital presence that grow with it season after season — making it easy for families to discover the camp, register online and follow the fun, while staying true to the spirit that has kept children coming back for over 20 years.",
   more: ["kidzania", "sunrise-waterpark"],
   draft: true,
   review: [
-    "Thumbnail shows the K-Camp website (logo 'K·Camp 25 years', hero 'KUWAIT CAMP', nav About / Age Groups / KIT Program / Activities / Team / Gallery / Contact, lavender 'Register Now' button) — assumed CRACKWITS designed and built the site; confirm.",
-    "Assumed 'KCAMP' = Kuwait Camp, a children's summer camp with a 25-year history (from the logo) — confirm name/history wording.",
-    "Social content, content production and merch/camp kit scope are assumptions.",
-    "Assumed CRACKWITS integrated the 25-years mark into the logo lock-up — confirm who designed the logo.",
-    "Domain 'kcamp.com.kw', handle '@kcampkw', nav labels (shortened) and line '25 summers of good times.' are placeholders.",
-    "Palette sampled from the logo (coral, orange, blue, green) and the lavender CTA; typeface 'Bricolage Grotesque' is a stand-in.",
+    "From crackwits.com case study: Kuwait seasonal camp for ages 3–15, running 20+ years, activities grouped as Move / Play / Create, trained counsellors; scope = brand revamp (logo, iconography, banners, stationery, collateral, ad templates), seasonal strategy (individual and corporate audiences, online and offline), website with registration and season galleries, social media (calendars, daily posting and boosting, on-ground coverage, photo/video supervision).",
+    "Board line 'Move. Play. Create.' uses the camp's activity categories from the reference; the reference punchline (inspiring children's cognitive and physical development) is not used verbatim — confirm.",
+    "'25 years' in the thumbnail logo vs 'over 20 years' in the reference — copy says 'over 20 years'; confirm current figure.",
+    "Domain 'kcamp.com.kw' and handle '@kcampkw' are placeholders (reference shows only a shared-footer link); nav shortened from the thumbnail.",
+    "Camp kit/merchandise in section 4 is an illustrative application of the collateral work.",
+    "Palette sampled from the logo and lavender CTA; Bricolage Grotesque is a stand-in.",
     "Stat labels are suggestions; values intentionally empty.",
     "All four case-study images are AI-generated placeholders (children shown are AI-generated, not camp attendees).",
   ],

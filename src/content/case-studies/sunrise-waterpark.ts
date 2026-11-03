@@ -5,21 +5,21 @@ const sunriseWaterpark: CaseStudy = {
   name: "Sunrise WATERPARK",
   category: "ENTERTAINMENT",
   thumbnail: "/work/sunrise.webp",
-  subtitle: "A bright, bilingual identity built to be worn, floated and splashed.",
+  subtitle: "Launching West Africa’s largest waterpark before its gates opened.",
   cover: {
     src: "/case-studies/sunrise-waterpark/cover.webp",
     alt: "Orange, blue and pink water slides above a pool at golden hour",
     ai: true,
   },
   overview: [
-    "Sunrise Waterpark is a family leisure destination built around slides, pools and long, sunny days out.",
-    "A waterpark brand lives almost entirely outdoors and in motion — on rings, towels, signage and wristbands, in two languages, under direct sun. It needed an identity that stays bold and legible in water and remains joyful from the entrance gate to the last slide.",
-    "CRACKWITS created a colour-led identity system for Sunrise: an energetic wordmark, a palette drawn from the first light of the day, playful graphic shapes, and a bilingual guest language applied across the park’s physical touchpoints and social channels.",
+    "SUNRISE WATERPARK began as a vision for a 55,000-square-metre destination — the largest waterpark in West Africa.",
+    "Launching a place that doesn’t exist yet means selling a feeling from blueprints. The park needed a brand, a digital home and a campaign that could build real anticipation long before the first guest arrived.",
+    "CRACKWITS took SUNRISE from blank canvas to opening day and beyond: strategy and brand inception, a website with an interactive park map, social channels built from scratch, a full launch campaign with production and paid media, and on-the-ground activations.",
   ],
-  services: ["Brand Identity", "Creative Direction", "Packaging", "Social Media"],
+  services: ["Strategy", "Brand Identity", "UX/UI", "Web Development", "Social Media", "Digital Media"],
   stats: [
-    { value: null, label: "Season Visitors" },
-    { value: null, label: "Social Engagement Rate" },
+    { value: null, label: "Website Visitors at Launch" },
+    { value: null, label: "Reel Views" },
     { value: null, label: "Branded Touchpoints" },
   ],
   brandBoard: {
@@ -34,21 +34,21 @@ const sunriseWaterpark: CaseStudy = {
         { name: "Pool Aqua", hex: "#3EC6E8" },
         { name: "Splash White", hex: "#FFFFFF" },
       ],
-      line: "Forward, into the water.",
+      line: "A World of Marvels.",
       pattern: "dots",
-      voice: ["Sunny", "Playful", "Welcoming", "Bold"],
+      voice: ["Wonder", "Movement", "Discovery", "Joy"],
     },
     images: ["/case-studies/sunrise-waterpark/duo.webp", "/case-studies/sunrise-waterpark/lead.webp"],
   },
   sections: [
     {
       layout: "lead",
-      title: ["Designing a Brand", "That Lives in the Water"],
+      title: ["Building a World", "Before the Walls Went Up"],
       body: [
-        "The most-seen surface of a waterpark brand isn’t a screen — it’s a ring spinning down a slide. The identity was designed from that object outwards: big blocks of colour that read from a distance, shapes that survive curves and seams, and type that stays clear on wet vinyl in full sun.",
+        "The brief was to create a whole universe from nothing and make it feel welcoming well ahead of opening day. CRACKWITS scanned the competition, set the strategic positioning, designed the logo and built an identity around wonder, movement and discovery — joyful colour and a visual language that flows like water — all steered by one big idea: “A World of Marvels”.",
       ],
       media: [
-        { kind: "image", src: "/work/sunrise.webp", alt: "Sunrise Waterpark branded swim rings floating in a pool" },
+        { kind: "image", src: "/work/sunrise.webp", alt: "SUNRISE WATERPARK branded swim rings floating in a pool" },
         {
           kind: "image",
           src: "/case-studies/sunrise-waterpark/lead.webp",
@@ -59,10 +59,10 @@ const sunriseWaterpark: CaseStudy = {
     },
     {
       layout: "feature",
-      title: ["Guiding Guests", "In Two Languages"],
+      title: ["An Identity Designed", "to Scale Beyond the Logo"],
       body: [
-        "Sunrise welcomes guests in English and French, so every instruction had to work twice without doubling the noise. Bilingual pairs such as Left – Gauche and Forward – Vers l’avant were set as a single typographic unit, with colour and arrow shapes doing most of the work.",
-        "The same logic extends to wayfinding: colour-coded totems and simple pictograms let families navigate the park at a glance, whichever language they read first.",
+        "The identity was built to become an ecosystem. It runs through on-site signage and wayfinding, flyers, brochures and printed collateral, merchandise and branded items, and a multi-visual outdoor campaign.",
+        "It even greets travellers on arrival, with large-format airport banners announcing SUNRISE — so the park’s promise is felt well before anyone reaches the gate.",
       ],
       media: [
         {
@@ -75,29 +75,29 @@ const sunriseWaterpark: CaseStudy = {
     },
     {
       layout: "duo",
-      title: ["Turning a Day Out", "Into a Summer Feed"],
+      title: ["Opening the Gates", "Online First"],
       body: [
-        "Every splash is a potential post. Social content was built around real guest moments — the drop at the bottom of a slide, the first jump of the day — framed with the brand’s colour and kept loose, sunny and spontaneous.",
-        "Graphic dots and droplet shapes from the identity give each post a recognisable signature, so the feed reads as Sunrise even before the name appears.",
+        "The digital world opened before the park did. A “Coming Soon” page sparked curiosity and drew thousands of visitors within days, then gave way to a vibrant, fluid website where guests explore attractions, plan their day and buy tickets. At its centre sits an interactive animated park map, designed and built by CRACKWITS, that lets people hover and discover each ride before setting foot inside.",
+        "Social channels were set up from the ground up, with a defined tone of voice and content foundations in place long before launch — then filled with teaser edits, story-led posts, early-bird ticket pushes and influencer collaborations.",
       ],
       media: [
         {
           kind: "phone",
           src: "/case-studies/sunrise-waterpark/duo.webp",
           handle: "@sunrisewaterpark",
-          caption: "Last slide of the day hits different.",
+          caption: "A world of marvels is almost here. Early-bird tickets are open.",
           alt: "Two friends laughing at the bottom of an orange water slide",
           ai: true,
         },
-        { kind: "poster", line: "Forward, into the water.", alt: "Sunrise Waterpark brand poster" },
+        { kind: "poster", line: "A World of Marvels.", alt: "SUNRISE WATERPARK brand poster" },
       ],
     },
     {
       layout: "feature",
-      title: ["Painting the Park", "In the Colours of Morning"],
+      title: ["Turning Anticipation", "Into Footfall"],
       body: [
-        "The palette takes its cue from the name: warm orange for the sun, deep royal blue for the sky before it, pink for the glow in between, set against the aqua of the pools themselves.",
-        "Applied across slides, parasols, rings and merchandise, the colours turn the whole park into a single brand environment — cheerful, easy to remember and unmistakable in every guest photo.",
+        "After storyboarding and creative direction, CRACKWITS coordinated the production house and led the launch shoot on site, among the splashes, to build a content bank of photography, video and cut-downs for long-term use. A structured paid plan across META and Google Ads, with a 360° rollout through digital and outdoor, carried it to audiences.",
+        "On the ground, billboards announced the opening while branded booths, flags, umbrellas and apparel extended the brand around the park. After launch, CRACKWITS stayed on for SEO, website maintenance and ongoing collateral as the park kept evolving.",
       ],
       media: [
         {
@@ -110,18 +110,17 @@ const sunriseWaterpark: CaseStudy = {
     },
   ],
   outcome:
-    "Sunrise now has an identity that works where the brand is actually experienced — on the water, in the sun and in two languages — giving the park a joyful, consistent presence from the first ring to the last photo shared.",
+    "SUNRISE WATERPARK opened as a destination people already knew and talked about — a brand, digital experience and campaign moving together, giving the park a consistent, joyful presence from airport arrivals to the last slide of the day.",
   more: ["kcamp", "pointe-anglaise"],
   draft: true,
   review: [
-    "Section image experience.webp is an additional AI placeholder (generated so the cover is not repeated) — replace with real imagery.",
-    "Thumbnail shows branded swim rings with bilingual English/French copy ('Left – Gauche', 'Forward – Vers l'avant') — assumed CRACKWITS designed the identity and applied it to rings/merch; confirm scope.",
-    "Assumed a francophone/bilingual market from the rings; location of the park not stated — confirm.",
-    "No website evidence, so no browser mockup used. Wayfinding/signage and social content scope are assumptions.",
-    "Services 'Packaging' (used for merch/ring graphics) and 'Social Media' are assumptions.",
-    "Handle '@sunrisewaterpark' and brand line 'Forward, into the water.' are placeholders (line riffs on the 'Forward' copy on the rings).",
-    "Palette sampled from the thumbnail (royal blue, orange, pink, aqua); typeface 'Bricolage Grotesque' is a stand-in for the rounded wordmark.",
-    "Stat labels are suggestions; values intentionally empty.",
+    "From crackwits.com case study: West Africa’s largest waterpark, 55,000 m²; competitor scan, positioning, logo and identity; big idea 'A World of Marvels'.",
+    "From crackwits.com case study: signage/wayfinding, print, merchandise, airport banners, outdoor; coming-soon page then ticketing website; interactive animated park map; social set-up.",
+    "From crackwits.com case study: teasers, early-bird and influencer campaigns; production and shoot oversight; META and Google Ads; billboards, booths, flags, umbrellas, apparel; post-launch SEO and maintenance.",
+    "'Thousands of visitors within days' is from the reference; no figures shown in stats. The reference also mentions reels reaching millions of views — not used in copy.",
+    "Country within West Africa not stated — not claimed. Bilingual English/French rings in the thumbnail not mentioned in copy.",
+    "Palette sampled from the thumbnail; typeface 'Bricolage Grotesque' is a stand-in for the rounded wordmark.",
+    "Handle '@sunrisewaterpark' and post caption are assumed/illustrative; domain sunrisewaterpark.com per reference (not used in a mockup).",
     "All four case-study images are AI-generated placeholders.",
   ],
 };

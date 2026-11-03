@@ -10,18 +10,17 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Assumed 965SMILE is a cosmetic/general dental clinic in Kuwait City (thumbnail shows 'Cosmetic Dentistry', a Kuwait City address and the line 'An initiative to make Kuwait smile') — confirm.
-- [ ] Assumed CRACKWITS delivered the website (UX/UI and development) — thumbnail shows the site. Confirm whether brand identity, social media and content production were also in scope.
-- [ ] Bilingual (English/Arabic) website assumed from the Arabic toggle in the thumbnail.
-- [ ] Domain '965smile.com' assumed — confirm.
-- [ ] Section 4 (appointment cards, aftercare kits, wayfinding) assumes offline identity applications — confirm or replace.
-- [ ] Palette sampled from the thumbnail (teal headline accent, amber CTAs); hex values approximate. Typeface 'Manrope' is a stand-in for the site's rounded geometric sans — confirm.
-- [ ] Brand line 'Serious about smiles.' adapted from the site headline 'We are serious about smiles' — confirm usage.
-- [ ] Social handle '@965smile' assumed.
+- [ ] From crackwits.com case study: ethical cosmetic and restorative dentistry with personalised treatment; scope = brand relaunch (logo, colours, fonts, graphics with variations), website UX/UI and development with login and booking system, administrative forms, social media management, social and Google Ads boosting.
+- [ ] From crackwits.com case study: punchline about ethical work performed with utmost delicacy — board line 'Ethical work, delicate hands.' is a shortened paraphrase; confirm.
+- [ ] Market (Kuwait) inferred from the name and the thumbnail's Kuwait City address — not stated in the reference.
+- [ ] Domain '965smile.com', handle '@965smile', nav, headline, CTA and social caption are placeholders.
+- [ ] Section 4 image shows clinic stationery rather than the actual forms — illustrative only.
+- [ ] Palette sampled from the thumbnail; Manrope is a stand-in for the site's rounded sans.
+- [ ] All four case-study images are AI-generated placeholders.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
-- [ ] Online Bookings
+- [ ] Online Appointments
 - [ ] Monthly Website Visits
 - [ ] Social Engagement Rate
 
@@ -36,19 +35,19 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Section image experience.webp is an additional AI placeholder (generated so the cover is not repeated) — replace with real imagery.
-- [ ] The thumbnail shows only a branded notebook; assumed CRACKWITS delivered positioning, identity, stationery, site hoardings, signage and social/presentation templates. Confirm scope.
-- [ ] Assumed BUILDOSER is a construction/development company (design through to handover) based on the name and REAL ESTATE category. Confirm exact business and services.
-- [ ] Wordmark appears lowercase ('buildoser', possibly with a diaeresis on the 'o') with a small descriptor line that is not legible. Confirm exact wordmark spelling and descriptor.
-- [ ] Handle @buildoser is assumed. Market/location not stated; copy kept location-neutral.
-- [ ] Palette sampled from the notebook (white, light grey, sand/beige, graphite); hex values approximate. Outfit chosen to approximate the light geometric lowercase wordmark.
-- [ ] The construction-line pattern rationale (setting-out drawings) is an interpretation of the notebook graphic. Brand line 'Every line has a purpose' is new copy.
+- [ ] From crackwits.com case study: contracting and trading corporation in Kuwait; 15 years of contracting, fit-out and interior design; residential extensions, loft conversions, renovations, commercial landscaping, shop fitting.
+- [ ] From crackwits.com case study: scope was a brand revamp/relaunch (logo, colours, fonts, collaterals, stationery, graphic elements, several variations), a project portfolio and an under-construction web page. Site hoardings, signage and social templates removed.
+- [ ] Reference spells the relaunched name 'BUILDÖSER'; board wordmark set to 'buildöser' — confirm exact spelling and casing.
+- [ ] Brand line 'Fifteen years of building, made new.' is new copy based on the punchline about 15 years of contracting.
+- [ ] Handle '@buildoser' and the phone caption are invented; social media is not in the reference scope — the phone mockup is illustrative.
+- [ ] Palette sampled from the notebook thumbnail; hex values approximate. Outfit chosen to approximate the wordmark.
+- [ ] All AI images are illustrative placeholders.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
-- [ ] Brand Touchpoints Delivered
-- [ ] Projects Branded On Site
-- [ ] New Business Enquiries
+- [ ] Brand Assets Revamped
+- [ ] Projects in the Portfolio
+- [ ] Identity Variations Presented
 
 **AI placeholder images to replace**
 
@@ -62,19 +61,19 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Section image experience.webp is an additional AI placeholder (generated so the cover is not repeated) — replace with real imagery.
-- [ ] Assumed Burj Al Tojjar is a commercial/mixed-use tower (name translates roughly as 'Tower of Merchants'); likely the Kuwait City tower, but location is not stated in copy. Confirm building type and location.
-- [ ] Thumbnail shows only the square Kufic monogram and Latin wordmark engraved on brushed gold over marble. Assumed CRACKWITS delivered positioning, bilingual identity, signage/wayfinding, stationery, leasing communication and event materials. Confirm scope.
-- [ ] Description of the monogram (square Kufic, stepped strokes reading as a floor plan) is an interpretation; confirm the design rationale and that the mark spells the tower's Arabic name.
-- [ ] Handle @burjaltojjar is assumed. Brand line 'Where commerce finds its address' is new copy.
-- [ ] Palette sampled from the thumbnail (brushed gold, champagne, marble white); bronze and grey added. Hex values approximate. IBM Plex Sans Arabic chosen for bilingual setting; the Latin wordmark on the thumbnail is a wide geometric sans.
-- [ ] Event Journeys included as a service on the assumption of launch/leasing events. Confirm.
+- [ ] From crackwits.com case study: panoramic tower in Kuwait’s business hub with a 2,000 sqm multi-functional corporate space on the top floor under a skylit ceiling; aimed at top management in law, real estate and other industries.
+- [ ] From crackwits.com case study: scope was the emblematic logo (modern Arabic calligraphy, Latin/Arabic fusion), brand assets, stationery and collaterals, an informative website for tenants, and the top-floor interior (concepts, 3D renders, architectural drawings, control sheets). Wayfinding/signage and event claims removed.
+- [ ] From crackwits.com case study: brand line adapted from the punchline about inspiring top management.
+- [ ] 'Kuwait City' in the subtitle inferred from 'heart of Kuwait’s business hub' — confirm.
+- [ ] Handle '@burjaltojjar' and the phone caption are assumed/invented.
+- [ ] Palette sampled from the thumbnail (brushed gold, champagne, marble); bronze and grey added. IBM Plex Sans Arabic chosen for bilingual setting.
+- [ ] All AI images are illustrative; none shows the actual top-floor interior — replace with the real renders if available.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
-- [ ] Leasing Enquiries
-- [ ] Wayfinding Touchpoints
-- [ ] Tenant Occupancy
+- [ ] Tenant Enquiries
+- [ ] Monthly Website Visits
+- [ ] Brand Touchpoints
 
 **AI placeholder images to replace**
 
@@ -88,19 +87,18 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Assumed CRACKWITS designed and built the COYA website (the thumbnail shows a website with a “City of London” location selector and “Book A Table” CTA) plus social content — confirm scope and which markets/venues were covered.
-- [ ] COYA is described generally as a Peruvian restaurant, bar and lounge with venues in several international cities (public knowledge); no specific cities named.
-- [ ] Domain “coyarestaurant.com”, nav items and handle “@coyarestaurant” are assumed — verify.
-- [ ] The website hero headline “Discover Peruvian fusion delights.” is taken from the thumbnail.
-- [ ] The physical touchpoints section (menus, bill folders, reservation cards) assumes CRACKWITS influenced or aligned with print collateral — remove if out of scope.
-- [ ] Thumbnail shows a “Diners’ Choice” badge; deliberately not mentioned as an award.
-- [ ] Palette sampled from the thumbnail (black, burnt orange velvet) plus assumed gold accent from the logo; typeface Cormorant Garamond chosen to approximate the site’s serif.
+- [ ] From crackwits.com case study: Peruvian food, pisco infusions, cultural events and parties; venues in Mayfair, Dubai, Abu Dhabi, London City, Monte Carlo, Paris, Mykonos, Doha and Riyadh; punchline 'Find your inner Inca.'; domain coyarestaurant.com.
+- [ ] From crackwits.com case study: core concept, logo and branding; coming-soon page and website; social strategy (art direction, content, design, copy, boosting) to push tickets, engagement and bookings; billboard design; media plan with Google Ads and META.
+- [ ] Reference says CRACKWITS created the logo and branding for an established global brand — confirm which market/venue the work covered and how to phrase it.
+- [ ] Website headline is from the thumbnail; nav items and handle '@coyarestaurant' are assumed.
+- [ ] Palette sampled from the thumbnail plus an assumed gold; Cormorant Garamond approximates the site serif.
+- [ ] feature.webp (billboard scene) needs regenerating — current image shows menus and a bill folder.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
 - [ ] Online Reservations
-- [ ] Monthly Site Visitors
 - [ ] Social Engagement Rate
+- [ ] Campaign Reach
 
 **AI placeholder images to replace**
 
@@ -113,20 +111,20 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Thumbnail file is named overcubic.png; content written for CUBIX as listed in brands.ts. Confirm brand name.
-- [ ] Assumed CRACKWITS delivered positioning, identity, stationery and the 2022 brand profile document (all visible in the thumbnail). Website and social content are assumed. Confirm scope.
-- [ ] Services (trade-show exhibits, boutique fit-outs, podiums, bespoke interiors) and Shuwaikh Industrial Area, Kuwait location read from the thumbnail; confirm.
-- [ ] Domain cubixpro.com and handle @cubixpro read from small print on the letterhead; confirm both are current. No direct website evidence; the browser mockup is speculative.
-- [ ] Leonardo da Vinci quote 'Simplicity is the ultimate sophistication' appears in the brand profile; reused as the poster line. Brand line 'Simplicity, built to measure' is new copy. Confirm.
-- [ ] Palette sampled from the thumbnail (red ~#E3263F, slate ~#343A44); hex values approximate. Montserrat chosen as closest available to the identity's geometric sans.
-- [ ] Hoardings, vehicle livery and self-built trade-fair stand applications are assumed.
-- [ ] The symbol description (notched interlocking X) is an interpretation of the logo; confirm the design rationale.
+- [ ] Business description (luxury bespoke fitted interiors for commercial and non-commercial projects across Kuwait; brand interior environments, stand design and fabrication; committed craftsmen) from crackwits.com case study.
+- [ ] Scope (logo uplift keeping the identity intact, brand assets, stationery and collaterals, company profile with fewer words and more visuals) from crackwits.com case study.
+- [ ] Brand line 'Brand interiors, designed and built.' paraphrases the crackwits.com punchline; 'Precision. Passion. Progress.' theme from the same source.
+- [ ] No website or social media in the reference scope. The browser mockup is now framed as the profile viewed on screen and the phone as a social-format crop — consider replacing both media items with profile spread images.
+- [ ] Domain cubixpro.com and handle @cubixpro read from the letterhead in the thumbnail; confirm.
+- [ ] Palette sampled from the thumbnail (red ~#E3263F, slate ~#343A44); Montserrat is the closest available typeface.
+- [ ] Stat labels are suggestions; values intentionally empty.
+- [ ] All case-study images except the thumbnail are AI-generated placeholders.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
-- [ ] Pitches Supported
-- [ ] Brand Touchpoints Delivered
-- [ ] New Client Enquiries
+- [ ] Brand Assets Delivered
+- [ ] Projects Showcased
+- [ ] Profile Pages
 
 **AI placeholder images to replace**
 
@@ -139,20 +137,17 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Assumed CRACKWITS delivered the app UX/UI and illustration system (thumbnail shows the app home screen) — confirm scope, including app development and brand identity.
-- [ ] Market not stated; assumed a Gulf market (Kuwait/UAE) — no location claims made in copy. Confirm.
-- [ ] Website section assumed — no website evidence in the thumbnail. Domain 'homeyways.com' and nav items are placeholders.
-- [ ] Section 4 (uniforms, supply kits, vehicles) is assumed — confirm or replace.
-- [ ] Service categories referenced only as 'general cleaning' and 'specialised services' (visible in thumbnail); others are implied — confirm full list.
-- [ ] Palette sampled from the logo and illustrations (navy, blue, yellow, green, lilac); hex values approximate. Typeface 'Bricolage Grotesque' is a stand-in — confirm.
-- [ ] Brand line 'Impeccable, every time.' adapted from the app banner 'Impeccable, neat and spotless… every time!'. Web headline is invented.
-- [ ] Social handle '@homeyways' assumed.
+- [ ] From crackwits.com case study: services marketplace for residential and corporate properties; book, track and pay online; trusted agents, transparency, appealing rates; UAE market; punchline 'If not impeccable, consider it complimentary.'.
+- [ ] From crackwits.com case study: brand name, logo and identity, icons; strategy (4Os, big idea, market research); website and web app; mobile app with customer care, preferences, agent reviews; SOP and code of conduct; corporate profile and investor deck.
+- [ ] Domain 'homeyways.com' is a placeholder — the reference shows a stray 'sunrisewaterpark.com' link. Nav items are assumed.
+- [ ] Social media appears in the reference’s service tags but is not described; social post, handle '@homeyways' and caption are illustrative.
+- [ ] Palette sampled from the logo and illustrations; typeface 'Bricolage Grotesque' is a stand-in.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
 - [ ] App Downloads
 - [ ] Monthly Bookings
-- [ ] Repeat Booking Rate
+- [ ] Services Offered
 
 **AI placeholder images to replace**
 
@@ -165,22 +160,19 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Relationship to RAWBANK described lightly as 'connected to the RAWBANK ecosystem' (the app UI shows an 'Appro Rawbank' tile) — confirm the correct ownership/partnership wording.
-- [ ] Assumed CRACKWITS delivered the app UX/UI (thumbnail shows the app home screen) — confirm whether CRACKWITS also handled app development, or design only.
-- [ ] Assumed CRACKWITS delivered social media and campaign creative (thumbnail banner shows '0% de frais' campaign) — confirm scope.
-- [ ] Website section is assumed; no website evidence in the thumbnail. Domain 'illicocash.cd' and nav items are placeholders — confirm or replace with an image section.
-- [ ] Agent/kiosk signage section assumes CRACKWITS touched offline identity applications — confirm or remove.
-- [ ] Market assumed to be the DRC, French-language UI and communication (per thumbnail).
-- [ ] 'Fee-free wallet-to-wallet transfers' referenced from the thumbnail banner ('0% de frais … illicocash à illicocash') — confirm the offer is still current/appropriate to mention.
-- [ ] Services listed from the thumbnail tiles (send, international transfer, withdrawal, airtime, TV renewal, virtual cards, top-ups) — confirm.
-- [ ] Palette sampled from the thumbnail (graphite UI, yellow, teal, coral accents); hex values approximate. Typeface 'Outfit' chosen as a stand-in — confirm the actual brand typeface.
-- [ ] Brand line 'Your money, right away.' / 'Votre argent, tout de suite.' is invented — replace with the official tagline if one exists.
+- [ ] From crackwits.com case study: e-wallet, e-commerce and mPOS ecosystem for banked and unbanked users; agency banking context; 360° TTL relaunch.
+- [ ] From crackwits.com case study: logo uplift, brand character, colours, iconography and brand guideline; teaser and full website; SEO/ASO, blog posts and monthly reports; app redesign, animated demos, App Store screenshots and video preview.
+- [ ] From crackwits.com case study: campaign storyboard and remote production supervision, digital-to-print ads, daily social management, social boosting and Google Ads; line 'Your pocket-sized moneyger!'; domain illicocash.com.
+- [ ] Market (DRC, French-language UI) and the RAWBANK link are assumed from the thumbnail, not stated in the reference — confirm.
+- [ ] Website nav, French headline and social caption are illustrative.
+- [ ] Outdoor/agent-kiosk application is an interpretation of 'through-the-line' and 'print' — confirm.
+- [ ] Palette sampled from the thumbnail; typeface 'Outfit' is a stand-in.
 - [ ] Social handle '@illicocash' assumed.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
 - [ ] App Downloads
-- [ ] Monthly Active Wallets
+- [ ] Website Visitors
 - [ ] Monthly Impressions
 
 **AI placeholder images to replace**
@@ -194,20 +186,20 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Thumbnail shows the K-Camp website (logo 'K·Camp 25 years', hero 'KUWAIT CAMP', nav About / Age Groups / KIT Program / Activities / Team / Gallery / Contact, lavender 'Register Now' button) — assumed CRACKWITS designed and built the site; confirm.
-- [ ] Assumed 'KCAMP' = Kuwait Camp, a children's summer camp with a 25-year history (from the logo) — confirm name/history wording.
-- [ ] Social content, content production and merch/camp kit scope are assumptions.
-- [ ] Assumed CRACKWITS integrated the 25-years mark into the logo lock-up — confirm who designed the logo.
-- [ ] Domain 'kcamp.com.kw', handle '@kcampkw', nav labels (shortened) and line '25 summers of good times.' are placeholders.
-- [ ] Palette sampled from the logo (coral, orange, blue, green) and the lavender CTA; typeface 'Bricolage Grotesque' is a stand-in.
+- [ ] From crackwits.com case study: Kuwait seasonal camp for ages 3–15, running 20+ years, activities grouped as Move / Play / Create, trained counsellors; scope = brand revamp (logo, iconography, banners, stationery, collateral, ad templates), seasonal strategy (individual and corporate audiences, online and offline), website with registration and season galleries, social media (calendars, daily posting and boosting, on-ground coverage, photo/video supervision).
+- [ ] Board line 'Move. Play. Create.' uses the camp's activity categories from the reference; the reference punchline (inspiring children's cognitive and physical development) is not used verbatim — confirm.
+- [ ] '25 years' in the thumbnail logo vs 'over 20 years' in the reference — copy says 'over 20 years'; confirm current figure.
+- [ ] Domain 'kcamp.com.kw' and handle '@kcampkw' are placeholders (reference shows only a shared-footer link); nav shortened from the thumbnail.
+- [ ] Camp kit/merchandise in section 4 is an illustrative application of the collateral work.
+- [ ] Palette sampled from the logo and lavender CTA; Bricolage Grotesque is a stand-in.
 - [ ] Stat labels are suggestions; values intentionally empty.
 - [ ] All four case-study images are AI-generated placeholders (children shown are AI-generated, not camp attendees).
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
 - [ ] Online Registrations
-- [ ] Returning Families
-- [ ] Mobile Traffic Share
+- [ ] Returning Campers
+- [ ] Seasonal Social Reach
 
 **AI placeholder images to replace**
 
@@ -247,20 +239,20 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Product category names 'seating, tables, lounge, utilities' are partly assumed; only 'Furniture' and 'Utilities' are visible — confirm.
-- [ ] Assumed Kuwait market from the KWD currency selector and En/Arabic toggle in the thumbnail — confirm.
-- [ ] Assumed CRACKWITS designed and built the website (UX/UI, web development) — confirm, and confirm whether brand identity, content production and digital marketing were in scope.
-- [ ] Rental flow details (dates, delivery, collection, quantities) are assumed from the e-commerce structure — confirm actual functionality.
-- [ ] Section 4 (delivery vehicles, packaging, crew uniforms) is assumed — confirm or replace.
-- [ ] Domain 'lillajar.com' assumed.
-- [ ] Palette sampled from the thumbnail (emerald green, graphite text, grey hero, oak chair legs); hex values approximate. Typeface 'Syne' chosen as a stand-in for the thin geometric logotype — confirm.
-- [ ] Brand line 'Every space, ready to host.' and web headline invented; the site's actual hero reads 'Furniture Rental Provider'.
-- [ ] Social handle '@lillajar' assumed.
+- [ ] Business description (relaunch of THE RENTAL COMPANY, Kuwait’s first premium event rental provider, event types, 2,000+ sq m warehouse, installation and dismantling team) from crackwits.com case study.
+- [ ] Scope (branding relaunch with logo, colours, fonts, stationery and collaterals; vehicle branding in English and Arabic; e-commerce website; social strategy, daily posting and boosting; product photography supervision) from crackwits.com case study.
+- [ ] Brand line 'From simple to sophisticated.' and voice words paraphrase the crackwits.com punchline.
+- [ ] Category left as RETAIL; the business is event rental — confirm.
+- [ ] Domain 'lillajar.com' and handle '@lillajar' assumed; the reference gives no domain.
+- [ ] Website details (Furniture/Utilities nav, En/Arabic, KWD, hero 'Furniture Rental Provider') read from the thumbnail.
+- [ ] Palette sampled from the thumbnail; typeface 'Syne' is a stand-in for the logotype.
+- [ ] Stat labels are suggestions; values intentionally empty.
+- [ ] All case-study images except the thumbnail are AI-generated placeholders; feature.webp currently shows an unbranded van and should be regenerated.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
 - [ ] Online Rental Orders
-- [ ] Average Basket Size
+- [ ] Social Leads
 - [ ] Monthly Website Visits
 
 **AI placeholder images to replace**
@@ -303,21 +295,17 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Assumed MYLK MA’AM is a fresh, organic plant-based (nut/oat) milk brand — inferred from the “mylk” spelling and “Fresh | Organic” bottle copy in the thumbnail. Confirm.
-- [ ] Assumed CRACKWITS delivered brand identity, packaging, content production and social media — confirm actual scope (identity may pre-date CRACKWITS).
-- [ ] Thumbnail shows glass bottles with neck tags, a leaf/sprout symbol and a kraft granola pouch (“Oh My Gut!”); copy describes these as brand assets — confirm they are CRACKWITS work.
-- [ ] Assumed an e-commerce storefront with subscriptions/reordering exists; domain “mylkmaam.com” and nav items are placeholders.
-- [ ] Assumed home delivery in kraft boxes; the unboxing section is illustrative.
-- [ ] Instagram handle “@mylkmaam” is assumed.
-- [ ] Flavours (almond, oat, cocoa) are assumed from bottle colours.
-- [ ] Market not stated (assumed Kuwait/GCC); no launch date given.
-- [ ] Palette sampled from the thumbnail (espresso caps, latte, cream, teal mat); typeface Fraunces chosen to approximate the soft lowercase wordmark.
-- [ ] Original test cover.png (labelled dairy bottles with legible text) was replaced with a text-free plant-milk image.
+- [ ] From crackwits.com case study: homemade, organic, plant-based brand from a home kitchen in Kuwait; almond, oat, coconut and chocolate mylks, boosters, yogurt and granola in development.
+- [ ] From crackwits.com case study: scope was strategy, social media (bilingual content, boosting, monthly reports), lifestyle photoshoot, collaterals (uniforms, banners, QR menus, tables, vehicles), Shopify store, print production and event support. Packaging/identity design claims removed.
+- [ ] From crackwits.com case study: brand line adapted from the punchline 'the perfect healthy snack for everyone'.
+- [ ] Domain 'mylkmaam.com', store nav items and handle '@mylkmaam' are assumed (reference shows no brand domain). Phone caption invented.
+- [ ] Palette sampled from the thumbnail; Fraunces chosen to approximate the soft lowercase wordmark.
+- [ ] AI images (cover, lead, duo, feature) are illustrative; /work/milkman.webp is a real client image.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
-- [ ] Monthly Impressions
-- [ ] Repeat Order Rate
+- [ ] Monthly Reach
+- [ ] Store Visits From Social
 - [ ] Community Growth
 
 **AI placeholder images to replace**
@@ -331,21 +319,22 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Thumbnail file is named over-glass.png; content written for OGL as listed in brands.ts. Confirm brand name.
-- [ ] Logo descriptor reads roughly 'Heavy Equipment, Trucks & Generators'; business description based on that. Confirm.
-- [ ] Assumed CRACKWITS delivered strategy, UX/UI, web development and content. SEO & SEM, fleet livery, yard signage and spec sheets are assumed. Confirm scope.
-- [ ] Partner manufacturers on the site strip (Sitrak, Shantui, Weichai, Cemo) are not named in copy; the strip is mentioned generally. Confirm the dealership relationships before naming them.
-- [ ] Domain ogl.com and handle @ogl are placeholders; real domain is unknown. Replace.
-- [ ] Navigation (About, Products, Services, Dealerships, Spare Parts, We're Hiring, Inquire) and hero 'World-Class Machinery' taken from the thumbnail.
-- [ ] Market/country not stated; copy kept location-neutral.
-- [ ] Palette sampled from the website (black, white, accent blue ~#2350D0); hex values approximate. Manrope chosen as a close match to the site's sans.
-- [ ] Brand line 'Machinery that moves projects forward' and section on technicians/after-sales are new copy and assumptions.
+- [ ] Business description (heavy-grade construction machinery in Kuwait, 300,000+ spare parts, emergency-response and hazmat equipment, after-sales team, Mina Abdallah facility) from crackwits.com case study.
+- [ ] Scope (brand identity overhaul, teaser and full website with CMS and SEO, company profile for print and digital) from crackwits.com case study.
+- [ ] Brand line 'Construction efficiency, fully supported.' is a short paraphrase of the crackwits.com punchline — confirm or replace.
+- [ ] Social media was not part of the reference scope; the phone mockup is framed as digital sharing of profile content — consider swapping it for a profile spread image.
+- [ ] Domain 'ogl.com' and handle '@oglkw' are placeholders; the reference gives no domain. Replace.
+- [ ] Website navigation and hero 'World-Class Machinery' taken from the thumbnail.
+- [ ] Partner manufacturers visible on the site (Sitrak, Shantui, Weichai, Cemo) are not named in copy.
+- [ ] Palette sampled from the website (black, white, accent blue ~#2350D0); Manrope chosen as a close match.
+- [ ] Stat labels are suggestions; values intentionally empty.
+- [ ] All case-study images except the thumbnail are AI-generated placeholders.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
-- [ ] Monthly Website Sessions
-- [ ] Product Enquiries
-- [ ] Spare-Parts Requests
+- [ ] Product Categories Online
+- [ ] Website Enquiries
+- [ ] Organic Search Visibility
 
 **AI placeholder images to replace**
 
@@ -358,18 +347,20 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Thumbnail shows an OVO website (“Love at first bite”, “Vegan.Vegetarian.Flexitarian”, rolling-pin “Explore” button, “Order Online”). Assumed CRACKWITS designed and built the website plus brand positioning and social — confirm scope.
-- [ ] Assumed OVO serves Italian-inspired comfort food (pizza, pasta) from the site copy; other menu items are assumed.
-- [ ] Market and number of locations unknown (assumed Kuwait/GCC); “Locations” nav item is a placeholder.
-- [ ] Domain “ovo-kitchen.com” and handle “@ovo.kitchen” are placeholders — verify.
-- [ ] Delivery packaging section is illustrative; no packaging evidence in the thumbnail.
-- [ ] Palette sampled from the thumbnail (cream background, avocado greens, wooden board, black type) plus an assumed terracotta accent; DM Serif Display chosen to approximate the decorative serif wordmark.
+- [ ] From crackwits.com case study: vegan/vegetarian/flexitarian restaurant with a menu drawing on Silk Road and wider culinary traditions, seasonal and quality-led, light and friendly setting; scope = website from scratch (teaser and full site), minimal brand refresh (logo, palette, graphics, typography, messaging), photoshoot supervision, QR code menu standee.
+- [ ] From crackwits.com case study: punchline 'Vegan. Vegetarian. Flexitarian.'
+- [ ] Market and domain unknown (reference shows only a shared-footer link) — 'ovo-kitchen.com' and '@ovo.kitchen' are placeholders.
+- [ ] 'Love at first bite', the rolling-pin button and Order Online come from the website thumbnail; other nav items are placeholders.
+- [ ] Social posting is illustrative — the reference lists social media as a service tag but no social deliverable; confirm.
+- [ ] Palette sampled from the thumbnail plus an assumed terracotta; DM Serif Display approximates the wordmark.
+- [ ] Stat labels are suggestions; values intentionally empty.
+- [ ] All four case-study images are AI-generated placeholders; feature.webp needs regenerating as the QR standee.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
-- [ ] Online Orders
 - [ ] Monthly Site Visitors
-- [ ] Social Followers Growth
+- [ ] QR Menu Scans
+- [ ] Online Orders
 
 **AI placeholder images to replace**
 
@@ -382,20 +373,19 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Section image experience.webp is an additional AI placeholder (generated so the cover is not repeated) — replace with real imagery.
-- [ ] The thumbnail only shows the PizzaExpress roundel sign (“1965”) — no evidence of a website, app or campaign. Assumed CRACKWITS handled strategy, social media, content production and digital marketing for a regional franchise — confirm actual scope and market (assumed Kuwait/GCC).
-- [ ] Default browser mockup replaced with image media because there is no website evidence.
-- [ ] Public facts used: founded 1965 in London, art nouveau roundel, marble tables, open kitchens, dough balls and Margherita as signature items — confirm they are appropriate for the regional menu.
-- [ ] CRACKWITS is not claimed to have created the identity; copy frames the roundel and heritage as existing brand assets.
-- [ ] Instagram handle “@pizzaexpress” is a placeholder — the regional handle likely differs (e.g. a country suffix).
-- [ ] Terrace/location section assumes venues with outdoor seating.
-- [ ] Palette based on the black/cream roundel and gold “1965” plaque, with ivy green and brick sampled from the thumbnail; Playfair Display chosen as a refined serif (the real logotype is a custom art nouveau face).
+- [ ] From crackwits.com case study: established 1965; sociable pizzeria known for handcrafted pizza and spirited teams; scope limited to revamping the printed menu, inspired by the brand’s assets; punchline 'Handmade Happiness.'; 'Fresh Out the Oven!'.
+- [ ] Previous draft’s social, content and digital marketing scope removed — the reference lists menu design only.
+- [ ] Market/country not stated in the reference — no location claimed.
+- [ ] Phone mockup is illustrative of how the menu look carries into guest photos; it does not claim CRACKWITS ran social. Handle '@pizzaexpress' and caption are placeholders.
+- [ ] Menu specifics (hierarchy, spacing, legibility in different light) are descriptive interpretations — confirm with the actual menu.
+- [ ] Palette based on the roundel and 1965 plaque; Playfair Display is a stand-in for the custom logotype.
+- [ ] No image shows the redesigned menu itself — replace a placeholder with real menu photography if available.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
-- [ ] Monthly Impressions
-- [ ] Engagement Rate
-- [ ] Reservations & Orders
+- [ ] Menu Pages Redesigned
+- [ ] Dishes Featured
+- [ ] Restaurants Using the Menu
 
 **AI placeholder images to replace**
 
@@ -409,15 +399,13 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Location not stated in copy. The thumbnail shows a tropical waterfront setting and a French name; the site text is cut off ('Situated on the…'). Confirm city/country if it should be named.
-- [ ] Assumed CRACKWITS designed and built the website (thumbnail shows the site) — confirm scope, including brand identity, content production and digital marketing.
-- [ ] Language switcher visible in thumbnail ('English' dropdown) — assumed multilingual; confirm languages.
-- [ ] Residence types (towers and villas), amenities and pool are inferred from the hero render — confirm.
-- [ ] Section 4 (brochures, sales-suite materials, hoardings) is assumed — the brochure download CTA is visible, but print design scope must be confirmed.
-- [ ] Domain 'pointeanglaise.com' assumed.
-- [ ] Palette is an interpretation (navy UI from the site, plus natural tones from the render) — hex values approximate. Typeface 'Cormorant Garamond' chosen for tone; the site appears to use a geometric sans — confirm.
-- [ ] Brand line 'Luxury, redefined by nature.' is adapted from the site's 'Luxury Redefined'; social caption invented.
-- [ ] Social handle '@pointeanglaise' assumed.
+- [ ] From crackwits.com case study: riverside residential complex in Kinshasa, DRC, for local and expatriate residents; positioned as a regional pioneer.
+- [ ] From crackwits.com case study: scope was logo revamp (several directions, closest to the original chosen), teaser and full website, and an English/French brochure (French adapted, not translated).
+- [ ] From crackwits.com case study: brand line 'Luxury, redefined' (punchline: luxury redefined, a sanctuary).
+- [ ] Domain 'pointeanglaise.com' assumed — not given in the reference. Website nav items assumed.
+- [ ] Social handle '@pointeanglaise' and the phone caption are invented; social media is not part of the reference scope — the phone mockup is illustrative.
+- [ ] Palette and typeface are interpretations; hex values approximate. Confirm against the revamped logo.
+- [ ] All scenes (terrace, riverside residences, brochure flat lay) are illustrative AI placeholders.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
@@ -436,22 +424,22 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Section image experience.webp is an additional AI placeholder (generated so the cover is not repeated) — replace with real imagery.
-- [ ] Thumbnail shows a neon-lit indoor venue (arcade/game zones, bar with 'Drink' graphic, entrance) with large brand graphics on the ceiling — assumed QUEST is an indoor entertainment/game venue and CRACKWITS designed the identity and its environmental application; confirm scope.
-- [ ] Assumed environmental graphics/neon installations were CRACKWITS work (vs. interior architect) — confirm.
-- [ ] Merchandise (game cards, wristbands, hoodies), wayfinding and social content scope are assumptions.
-- [ ] Location/market not stated — confirm (likely Kuwait).
-- [ ] No website evidence, so no browser mockup.
-- [ ] Handle '@quest' and line 'Level up your night.' are placeholders.
-- [ ] Palette sampled from the thumbnail (black, red, violet, amber, blue); typeface 'Unbounded' is a stand-in.
+- [ ] Business description (fitness and cognitive challenge park, inter-connected arenas, urban-playground concept) from crackwits.com case study.
+- [ ] Scope (brand revamp bridging existing park branding, palette/graphics/typography, sonic signature, collaterals, website from scratch, social media) from crackwits.com case study.
+- [ ] Website opening on real-guest video and social tournaments/competitions, awareness and footfall campaigns from crackwits.com case study.
+- [ ] Brand punchline 'Ready. Set. Quest!' from crackwits.com case study.
+- [ ] Location/market not stated in the reference — copy kept location-neutral; handle '@questkw' assumes Kuwait. Confirm handle.
+- [ ] No domain given in the reference (scrape shows an unrelated footer link), so no browser mockup.
+- [ ] Collateral items (game cards, wristbands, token, hoodie) shown in the feature image are illustrative.
+- [ ] Palette sampled from the thumbnail; typeface 'Unbounded' is a stand-in.
 - [ ] Stat labels are suggestions; values intentionally empty.
-- [ ] All four case-study images are AI-generated placeholders.
+- [ ] All case-study images except the thumbnail are AI-generated placeholders.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
-- [ ] Weekly Footfall
-- [ ] User-Generated Posts
-- [ ] Repeat Visit Rate
+- [ ] Social Engagement
+- [ ] Website Visits
+- [ ] Tournament Entries
 
 **AI placeholder images to replace**
 
@@ -465,19 +453,18 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Thumbnail shows business cards (navy card with violet triangle mark, white card with 'SPECIAL' wordmark and 'INNOVATE ·…' tagline, address in Ardiya, Kuwait, havespecialevents.com, @havespecialevents) — assumed CRACKWITS designed the identity and stationery; confirm.
-- [ ] Assumed Special Events is an event production/management company (name + industrial-area address); confirm what the business actually does.
-- [ ] Website (havespecialevents.com, taken from the card) and social content scope are assumptions — confirm CRACKWITS built the site / ran social.
-- [ ] Nav, headline 'Every Detail, Produced', CTA 'Plan an Event' are placeholders.
-- [ ] Brand line 'Innovate every moment.' extrapolated from the partially visible tagline 'INNOVATE ·…' — replace with the real tagline.
-- [ ] Invitations/event passes collateral are assumed applications.
-- [ ] Palette sampled from the thumbnail; typeface 'Montserrat' approximates the geometric wordmark.
+- [ ] From crackwits.com case study: full-service events agency (ideation to execution); scope = brand revamp (logo, colours, fonts, collateral, stationery, graphics, multiple variations), website design and development, social media launch and daily management, brand ('expression') film.
+- [ ] From crackwits.com case study: punchline 'Innovate. Engage. Exhilarate.' and the 'handled with ownership, tailor-made' positioning.
+- [ ] Market (Kuwait) and domain havespecialevents.com / handle @havespecialevents taken from the business-card thumbnail, not the reference — confirm.
+- [ ] Website nav, CTA 'Start a Project' and social caption are placeholders.
+- [ ] Invitations and event passes in section 4 are illustrative applications of the stationery/collateral work.
+- [ ] Palette sampled from the thumbnail; Montserrat approximates the wordmark.
 - [ ] Stat labels are suggestions; values intentionally empty.
-- [ ] All four case-study images are AI-generated placeholders.
+- [ ] All four case-study images are AI-generated placeholders; no still from the brand film is shown.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
-- [ ] Events Delivered
+- [ ] Projects Showcased
 - [ ] Inbound Enquiries
 - [ ] Social Reach
 
@@ -492,20 +479,19 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Section image experience.webp is an additional AI placeholder (generated so the cover is not repeated) — replace with real imagery.
-- [ ] Thumbnail shows branded swim rings with bilingual English/French copy ('Left – Gauche', 'Forward – Vers l'avant') — assumed CRACKWITS designed the identity and applied it to rings/merch; confirm scope.
-- [ ] Assumed a francophone/bilingual market from the rings; location of the park not stated — confirm.
-- [ ] No website evidence, so no browser mockup used. Wayfinding/signage and social content scope are assumptions.
-- [ ] Services 'Packaging' (used for merch/ring graphics) and 'Social Media' are assumptions.
-- [ ] Handle '@sunrisewaterpark' and brand line 'Forward, into the water.' are placeholders (line riffs on the 'Forward' copy on the rings).
-- [ ] Palette sampled from the thumbnail (royal blue, orange, pink, aqua); typeface 'Bricolage Grotesque' is a stand-in for the rounded wordmark.
-- [ ] Stat labels are suggestions; values intentionally empty.
+- [ ] From crackwits.com case study: West Africa’s largest waterpark, 55,000 m²; competitor scan, positioning, logo and identity; big idea 'A World of Marvels'.
+- [ ] From crackwits.com case study: signage/wayfinding, print, merchandise, airport banners, outdoor; coming-soon page then ticketing website; interactive animated park map; social set-up.
+- [ ] From crackwits.com case study: teasers, early-bird and influencer campaigns; production and shoot oversight; META and Google Ads; billboards, booths, flags, umbrellas, apparel; post-launch SEO and maintenance.
+- [ ] 'Thousands of visitors within days' is from the reference; no figures shown in stats. The reference also mentions reels reaching millions of views — not used in copy.
+- [ ] Country within West Africa not stated — not claimed. Bilingual English/French rings in the thumbnail not mentioned in copy.
+- [ ] Palette sampled from the thumbnail; typeface 'Bricolage Grotesque' is a stand-in for the rounded wordmark.
+- [ ] Handle '@sunrisewaterpark' and post caption are assumed/illustrative; domain sunrisewaterpark.com per reference (not used in a mockup).
 - [ ] All four case-study images are AI-generated placeholders.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
-- [ ] Season Visitors
-- [ ] Social Engagement Rate
+- [ ] Website Visitors at Launch
+- [ ] Reel Views
 - [ ] Branded Touchpoints
 
 **AI placeholder images to replace**
@@ -520,21 +506,20 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Section image experience.webp is an additional AI placeholder (generated so the cover is not repeated) — replace with real imagery.
-- [ ] Assumed the robot mascot (chest reads 'ZO') is a TEKZONE brand character created or art-directed by CRACKWITS. The name 'ZO' and its role as host are assumptions. Confirm.
-- [ ] Assumed scope covers creative direction, social media/video content, venue branding and activations. Only a social-style frame is visible. Confirm.
-- [ ] Arabic caption on thumbnail translates to 'Time to compete!'; used in copy. Confirm translation and usage.
-- [ ] Venue offering (arcade, console, esports, tournaments) and audience (teens, families) are assumptions.
-- [ ] Market assumed to be Arabic-speaking/GCC (likely Kuwait) from the Arabic caption; not stated in copy. Confirm.
-- [ ] No website evidence, so section 2 uses an AI venue image instead of a browser mockup.
-- [ ] Handle @tekzone is assumed. Palette sampled from the thumbnail (violet, teal, green, blue); hex values approximate. Unbounded chosen for a gaming display feel.
-- [ ] Brand line 'Game on. Every visit.' is new copy.
+- [ ] From crackwits.com case study: TEKZONE is a futuristic family entertainment centre with rides and experiences for all ages; quality, affordable, safe.
+- [ ] From crackwits.com case study: scope was website design and development plus social media management (inventive topics, direct-engagement posts, frequent competitions). Venue branding and activations removed.
+- [ ] From crackwits.com case study: brief to be fun, friendly and bold but not childish; brand line 'The fun never stands still' (punchline).
+- [ ] Market/location not stated in the reference; copy kept location-neutral.
+- [ ] Robot mascot shown in the thumbnail — assumed to be an existing TEKZONE character, not created by CRACKWITS. Its name is not used.
+- [ ] Handle '@tekzone' and the phone caption are assumed/invented. Website structure (rides, plan your visit) is assumed.
+- [ ] Palette sampled from the thumbnail; hex values approximate. Unbounded chosen for a playful display feel.
+- [ ] All section imagery is illustrative AI placeholder.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
 - [ ] Monthly Impressions
-- [ ] Video Views
-- [ ] Footfall Growth
+- [ ] Engagement Rate
+- [ ] Competition Entries
 
 **AI placeholder images to replace**
 
@@ -625,22 +610,20 @@ Drafts: 24 of 25 case studies.
 
 **Assumptions to verify**
 
-- [ ] Assumed TWIG is a UAE savings app (thumbnail shows AED amounts) — confirm market and whether it is a standalone app or part of a bank.
-- [ ] Assumed CRACKWITS delivered brand identity, UX/UI and app development — confirm scope (thumbnail only shows the app savings screen).
-- [ ] Saving plan descriptions ('The Roundup' — round up to nearest AED 5; 'The Routine' — save amounts over a balance threshold) are interpreted from the thumbnail — confirm wording.
-- [ ] Website section is assumed; no website evidence in the thumbnail. Domain 'twig.ae' and nav items are placeholders.
-- [ ] Social media and digital marketing scope assumed — confirm.
-- [ ] Welcome packs / OOH applications in section 4 are assumed — confirm or replace.
-- [ ] Palette sampled from the thumbnail (indigo CTA, aqua chart bars, glass-blue backdrop); hex values approximate.
-- [ ] Typeface 'Montserrat' chosen because the app UI appears set in a geometric sans similar to it — confirm.
-- [ ] Brand line 'Small steps. Steady growth.' and website headline are invented.
-- [ ] Social handle '@twig.ae' assumed.
+- [ ] From crackwits.com case study: personal finance management app (automated saving, goal-setting, budget tracking, insights) launching in the Dubai/UAE fintech market; domain twig.ae.
+- [ ] From crackwits.com case study: scope = big idea, logo and branding, communication strategy, iconography and illustrations, teaser and full website with register-interest, social media strategy and daily management, app preview screenshots and short video.
+- [ ] From crackwits.com case study: punchline 'Take control of your finances with TWIG!' — shortened on the board.
+- [ ] App development is not in the reference scope and has been removed; the thumbnail app screen is shown as preview material.
+- [ ] Website nav and social caption/handle '@twig.ae' are placeholders.
+- [ ] Palette sampled from the thumbnail; Montserrat approximates the app UI typeface.
+- [ ] Stat labels are suggestions; values intentionally empty.
+- [ ] All four case-study images are AI-generated placeholders.
 
 **Metrics** — all shown as “—” until real figures are supplied:
 
-- [ ] App Downloads
-- [ ] Active Saving Plans
+- [ ] Waitlist Sign-ups
 - [ ] Monthly Impressions
+- [ ] Preview Video Views
 
 **AI placeholder images to replace**
 
