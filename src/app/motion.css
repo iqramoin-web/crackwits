@@ -181,6 +181,14 @@
   }
 }
 
+/* Phones and small tablets: the supporting copy gets its own side padding
+   so it doesn't run close to the screen edges. */
+@media (width <= 767px) {
+  .since-intro-copy {
+    padding-inline: clamp(16px, 6vw, 32px);
+  }
+}
+
 @media (width <= 580px) {
   .since-intro-eyebrow {
     font-size: 16px;
