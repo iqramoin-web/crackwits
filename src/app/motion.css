@@ -15,7 +15,8 @@
  * 12. the services page's rows and industries;
  * 13. one hover and label size for every button;
  * 14. the About commitment image and mobile lead-team alignment;
- * 15. the dark ↔ light section hand-off on the homepage and About page.
+ * 15. the dark ↔ light section hand-off on the homepage and About page;
+ * 16. work-card hover images and opening a case study.
  */
 
 :root {
@@ -1145,6 +1146,86 @@ main .selected-work .selected-work-eyebrow {
    entrance now, so the line itself needs no transition. */
 .about-site .about-story .about-story-support > .about-story-line {
   transition: none;
+}
+
+/* ---------- 16. work cards: hover image, open into the case study ---------- */
+
+/* Hover cross-fades in the case study's banner, as on Selected Work. */
+.work-card-image--hover {
+  position: relative;
+}
+
+.work-card-image--hover .work-card-image-hover {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition:
+    opacity 0.45s ease,
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.work-card:hover .work-card-image--hover .work-card-image-hover {
+  opacity: 1;
+}
+
+/*
+ * Opening a case study (lib/viewTransitionNav.ts): the card's image grows
+ * into the banner while the old page fades out and the new one fades in.
+ * During the open the banner is shown at once, so the image has somewhere
+ * to land; its usual fade-in would leave the frame empty.
+ */
+html[data-cs-open] .cs-case-image img {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+::view-transition-group(cs-image) {
+  animation-duration: 0.9s;
+  animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+::view-transition-image-pair(cs-image) {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+::view-transition-old(cs-image),
+::view-transition-new(cs-image) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation-duration: 0.9s;
+  animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+@keyframes vt-page-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes vt-page-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+html[data-cs-open]::view-transition-old(root) {
+  animation: vt-page-out 0.45s cubic-bezier(0.4, 0, 1, 1) both;
+}
+
+html[data-cs-open]::view-transition-new(root) {
+  animation: vt-page-in 0.7s var(--motion-ease) 0.35s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

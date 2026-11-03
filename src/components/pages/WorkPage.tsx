@@ -164,10 +164,17 @@ export function WorkPage() {
                   href={href}
                   onClick={(event) => navigateWithViewTransition(event, href, (to) => router.push(to))}
                 >
-                  <div className="work-card-image">
+                  <div className="work-card-image work-card-image--hover">
                     <img
                       src={`${brand.thumbnail}${brand.slug === "cheesecake-factory" ? "?v=2" : ""}`}
                       alt={`${brand.name} project`}
+                    />
+                    <img
+                      className="work-card-image-hover"
+                      src={brand.hover}
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
                     />
                   </div>
                   <p className="work-card-category">{brand.category}</p>

@@ -3,6 +3,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { markSiteNavigation } from "@/lib/siteSession";
+import { CARD_OPEN_FLAG } from "@/lib/viewTransitionNav";
 
 const COVER_MS = 560;
 /** Work cards run their own shared-image view transition; leave those clicks alone. */
@@ -82,6 +83,9 @@ export function PageTransition() {
     window.scrollTo(0, 0);
 
     const main = document.querySelector("main");
+    // A card opening runs its own view transition; fading the new page in as
+    // well would hide the banner the card image is growing into.
+    if (document.documentElement.dataset[CARD_OPEN_FLAG]) return;
     main?.classList.add("page-enter");
     const clearEnter = window.setTimeout(() => main?.classList.remove("page-enter"), 1400);
 
