@@ -1,63 +1,70 @@
 import type { MouseEvent } from "react";
 
-type ViewTransitionDocument = Document & {
-  startViewTransition?: (update: () => void | Promise<void>) => unknown;
-};
-
-/** Set on <html> while a card is opening; the case study's banner skips its fade-in. */
+/** Set on <html> while a case study is opening from a card (see motion.css §16). */
 export const CARD_OPEN_FLAG = "csOpen";
 
-/** Longest we hold the transition waiting for the case study to render. */
-const MAX_WAIT_MS = 2000;
+/**
+ * Timings modelled on plastic.design's work transition: the page glides the
+ * clicked card up towards the top while everything fades out, then the case
+ * study fades in and its hero plays (motion.css §16).
+ */
+const SCROLL_MS = 1200;
+const FADE_MS = 800;
+/** How long the flag stays on after navigating: the case study's entrance. */
+const ENTER_MS = 1600;
 
-/** Resolves once the case study at `path` is rendered and its banner image is ready. */
-function caseStudyReady(path: string) {
+const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+
+/** Smoothly scrolls the window to `targetY` over `duration` ms. */
+function glideTo(targetY: number, duration: number) {
   return new Promise<void>((resolve) => {
-    const started = performance.now();
-    const check = () => {
-      const banner = document.querySelector<HTMLImageElement>(".cs-case-image img");
-      const ready = location.pathname === path && banner && banner.complete && banner.naturalWidth > 0;
-      if (ready || performance.now() - started > MAX_WAIT_MS) resolve();
-      // A timer, not requestAnimationFrame: frames can be throttled while the
-      // page is in the background, which would stall the transition.
-      else window.setTimeout(check, 16);
+    const startY = window.scrollY;
+    const distance = targetY - startY;
+    const start = performance.now();
+    const step = () => {
+      const progress = Math.min((performance.now() - start) / duration, 1);
+      window.scrollTo(0, startY + distance * easeOutCubic(progress));
+      if (progress < 1) window.setTimeout(step, 16);
+      else resolve();
     };
-    check();
+    step();
   });
 }
 
+let opening = false;
+
 /**
- * Click handler for work cards: the image the visitor is looking at (the
- * hover image when one is showing) becomes the shared "cs-image" element and
- * grows into the case study's banner inside a view transition. Without the
- * View Transitions API the link navigates normally.
+ * Click handler for case-study cards (/work, Selected Work, More Work). The
+ * clicked card glides up near the top of the screen while the page fades out;
+ * then the case study opens and plays its entrance. Modifier-clicks and
+ * reduced-motion visitors get a plain navigation.
  */
 export function navigateWithViewTransition(
   event: MouseEvent<HTMLAnchorElement>,
   href: string,
   push: (href: string) => void,
 ) {
-  const doc = document as ViewTransitionDocument;
-  if (!doc.startViewTransition || event.metaKey || event.ctrlKey || event.shiftKey) return;
+  if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
   event.preventDefault();
-
-  // Only one element may carry the name: clear it from the current page's
-  // banner (More Work cards sit on a case study) before tagging the card.
-  document.querySelectorAll<HTMLElement>(".cs-case-image img").forEach((img) => {
-    img.style.viewTransitionName = "none";
-  });
-  const images = Array.from(event.currentTarget.querySelectorAll<HTMLImageElement>("img"));
-  const visible = images.reverse().find((img) => parseFloat(getComputedStyle(img).opacity) > 0.5) ?? images[0];
-  if (visible) visible.style.viewTransitionName = "cs-image";
+  if (opening) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    push(href);
+    return;
+  }
+  opening = true;
 
   const root = document.documentElement;
-  root.dataset[CARD_OPEN_FLAG] = "1";
-  const path = new URL(href, location.href).pathname;
-  const transition = doc.startViewTransition(() => {
+  const card = event.currentTarget;
+  const offset = window.innerWidth * (72 / 2184);
+  const targetY = Math.max(0, card.getBoundingClientRect().top + window.scrollY - offset);
+
+  root.dataset[CARD_OPEN_FLAG] = "leaving";
+  Promise.all([glideTo(targetY, SCROLL_MS), new Promise((r) => window.setTimeout(r, FADE_MS))]).then(() => {
+    root.dataset[CARD_OPEN_FLAG] = "entering";
     push(href);
-    return caseStudyReady(path);
-  }) as { finished?: Promise<void> } | undefined;
-  const done = () => delete root.dataset[CARD_OPEN_FLAG];
-  if (transition?.finished) transition.finished.then(done, done);
-  else window.setTimeout(done, MAX_WAIT_MS + 1200);
+    window.setTimeout(() => {
+      delete root.dataset[CARD_OPEN_FLAG];
+      opening = false;
+    }, ENTER_MS);
+  });
 }

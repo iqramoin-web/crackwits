@@ -6,7 +6,7 @@ import { markSiteNavigation } from "@/lib/siteSession";
 import { CARD_OPEN_FLAG } from "@/lib/viewTransitionNav";
 
 const COVER_MS = 560;
-/** Work cards run their own shared-image view transition; leave those clicks alone. */
+/** Case-study cards run their own open transition (lib/viewTransitionNav.ts); leave those clicks alone. */
 const VIEW_TRANSITION_LINKS = ".work-card, .selected-card, .cs-more-work-card";
 
 type Phase = "idle" | "covering" | "covered" | "revealing";
@@ -83,8 +83,8 @@ export function PageTransition() {
     window.scrollTo(0, 0);
 
     const main = document.querySelector("main");
-    // A card opening runs its own view transition; fading the new page in as
-    // well would hide the banner the card image is growing into.
+    // A card opening runs its own entrance (motion.css §16); don't add the
+    // generic page fade on top of it.
     if (document.documentElement.dataset[CARD_OPEN_FLAG]) return;
     main?.classList.add("page-enter");
     const clearEnter = window.setTimeout(() => main?.classList.remove("page-enter"), 1400);

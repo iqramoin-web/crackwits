@@ -91,7 +91,7 @@ export function CaseStudyPage({ study, more }: { study: CaseStudy; more: MoreWor
             <span>{study.subtitle}</span>
           </p>
           <div className="cs-case-image">
-            <img style={{ viewTransitionName: "cs-image" }} src={study.cover.src} alt={study.cover.alt} />
+            <img src={study.cover.src} alt={study.cover.alt} />
             {SHOW_DRAFT_MARKERS && study.cover.ai ? <AiTag /> : null}
           </div>
         </div>

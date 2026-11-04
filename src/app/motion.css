@@ -1169,62 +1169,63 @@ main .selected-work .selected-work-eyebrow {
 }
 
 /*
- * Opening a case study (lib/viewTransitionNav.ts): the card's image grows
- * into the banner while the old page fades out and the new one fades in.
- * During the open the banner is shown at once, so the image has somewhere
- * to land; its usual fade-in would leave the frame empty.
+ * Opening a case study, modelled on plastic.design (lib/viewTransitionNav.ts):
+ * the clicked card glides up towards the top while the page fades out (0.8s),
+ * then the case study fades in (0.4s) and its banner glides up into place on
+ * plastic's long, soft curve while the title rises line by line.
  */
-html[data-cs-open] .cs-case-image img {
-  opacity: 1 !important;
-  transform: none !important;
-  transition: none !important;
+:root {
+  --cs-open-ease: cubic-bezier(0.57, 0.24, 0.08, 1);
 }
 
-::view-transition-group(cs-image) {
-  animation-duration: 0.9s;
-  animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+html[data-cs-open="leaving"] main > :not(.header):not(.menu-overlay):not(.page-curtain) {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-::view-transition-image-pair(cs-image) {
-  border-radius: 14px;
-  overflow: hidden;
-}
-
-::view-transition-old(cs-image),
-::view-transition-new(cs-image) {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  animation-duration: 0.9s;
-  animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-}
-
-@keyframes vt-page-out {
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes vt-page-in {
+@keyframes cs-open-page-in {
   from {
     opacity: 0;
-    transform: translateY(24px);
   }
 }
 
-html[data-cs-open]::view-transition-old(root) {
-  animation: vt-page-out 0.45s cubic-bezier(0.4, 0, 1, 1) both;
+html[data-cs-open="entering"] main.cs-case-study {
+  animation: cs-open-page-in 0.4s ease-in both;
 }
 
-html[data-cs-open]::view-transition-new(root) {
-  animation: vt-page-in 0.7s var(--motion-ease) 0.35s both;
+/* The banner: glides up from 30% lower with a fade, on every visit (this
+   replaces the original 1.5s-delayed fade-in). */
+@keyframes cs-banner-rise {
+  from {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+}
+
+/* Hidden until the hero is marked visible, so it never flashes in place first. */
+.cs-case-hero .cs-case-image {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.cs-case-hero.is-visible .cs-case-image {
+  animation: cs-banner-rise 1.2s var(--cs-open-ease) 0.15s both;
+}
+
+.cs-case-hero .cs-case-image img,
+.cs-case-hero.is-visible .cs-case-image img {
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  ::view-transition-group(*),
-  ::view-transition-old(*),
-  ::view-transition-new(*) {
+  html[data-cs-open] main > *,
+  .cs-case-hero .cs-case-image {
     animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 
